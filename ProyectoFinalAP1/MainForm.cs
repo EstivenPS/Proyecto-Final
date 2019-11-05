@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinalAP1.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace ProyectoFinalAP1
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void registroDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RUsuariosForm ru = new RUsuariosForm();
+            ru.MdiParent = this;
+            ru.Show();
         }
     }
 }
