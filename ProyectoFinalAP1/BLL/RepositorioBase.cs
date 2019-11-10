@@ -58,9 +58,12 @@ namespace ProyectoFinalAP1.BLL
             try
             {
                 T entity = _contexto.Set<T>().Find(id);
-                _contexto.Set<T>().Remove(entity);
 
-                paso = _contexto.SaveChanges() > 0;
+                if(entity != null)
+                {
+                    _contexto.Set<T>().Remove(entity);
+                    paso = _contexto.SaveChanges() > 0;
+                }                   
             }
             catch(Exception)
             {

@@ -24,5 +24,12 @@ namespace ProyectoFinalAP1
             ru.MdiParent = this;
             ru.Show();
         }
+
+        private void registroDeCobradoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RCobradoresForm rc = new RCobradoresForm();
+            rc.MdiParent = this;
+            rc.Show();
+        }
     }
 }

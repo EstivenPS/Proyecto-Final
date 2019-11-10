@@ -30,6 +30,7 @@
         {
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDeCobradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,9 +55,18 @@
             // 
             // registrosToolStripMenuItem
             // 
+            this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registroDeCobradoresToolStripMenuItem});
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.registrosToolStripMenuItem.Text = "Registros";
+            // 
+            // registroDeCobradoresToolStripMenuItem
+            // 
+            this.registroDeCobradoresToolStripMenuItem.Name = "registroDeCobradoresToolStripMenuItem";
+            this.registroDeCobradoresToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.registroDeCobradoresToolStripMenuItem.Text = "Registro de Cobradores";
+            this.registroDeCobradoresToolStripMenuItem.Click += new System.EventHandler(this.registroDeCobradoresToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
@@ -81,8 +91,8 @@
             // registroDeUsuariosToolStripMenuItem
             // 
             this.registroDeUsuariosToolStripMenuItem.Name = "registroDeUsuariosToolStripMenuItem";
-            this.registroDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.registroDeUsuariosToolStripMenuItem.Text = "Registro de Usuarios";
+            this.registroDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.registroDeUsuariosToolStripMenuItem.Text = "Registrar un Usuarios";
             this.registroDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.registroDeUsuariosToolStripMenuItem_Click);
             // 
             // configuracionesToolStripMenuItem
@@ -117,6 +127,7 @@
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuracionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroDeCobradoresToolStripMenuItem;
     }
 }
 

@@ -20,13 +20,13 @@ namespace ProyectoFinalAP1.UI.Registros
         }
 
         private void Limpiar()
-        {//todo: Agregar posiblemente el EmpresaId
+        {
             UsuarioIdnumericUpDown.Value = 0;
             FechadateTimePicker.Value = DateTime.Now;
             NombrestextBox.Text = string.Empty;
             ApellidostextBox.Text = string.Empty;
             CedulamaskedTextBox.Text = string.Empty;
-            NombrestextBox.Text = string.Empty;
+            NombreUsuariotextBox.Text = string.Empty;
             ContrasenatextBox.Text = string.Empty;
             TipoUsuariocomboBox.Text = string.Empty;
             ActivocheckBox.Checked = false;
@@ -170,11 +170,11 @@ namespace ProyectoFinalAP1.UI.Registros
 
             if (repositorio.Eliminar(id))
             {
-                MessageBox.Show("Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("¡Eliminado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MyerrorProvider.SetError(UsuarioIdnumericUpDown, "No se puede eliminar un usuario que no existe")
+                MyerrorProvider.SetError(UsuarioIdnumericUpDown, "No se puede eliminar un usuario que no existe");
             }
         }
 
@@ -192,13 +192,20 @@ namespace ProyectoFinalAP1.UI.Registros
 
             if(usuario != null)
             {
-                MessageBox.Show("Usuario encontrado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LlenaCampos(usuario);
             }
             else
             {
                 MessageBox.Show("Usuario no encontrado", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void ActivocheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ActivocheckBox.Checked)
+                ActivocheckBox.ForeColor = Color.Green;
+            else
+                ActivocheckBox.ForeColor = Color.Red;
         }
     }
 }

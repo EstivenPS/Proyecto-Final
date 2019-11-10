@@ -24,7 +24,7 @@ namespace ProyectoFinalAP1.Entidades
         public Usuarios()
         {
             UsuarioId = 0;
-            EmpresaId = 0;
+            EmpresaId = 1;
             Fecha = DateTime.Now;
             Nombres = string.Empty;
             Apellidos = string.Empty;

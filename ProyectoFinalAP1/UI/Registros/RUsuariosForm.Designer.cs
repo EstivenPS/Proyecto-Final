@@ -42,14 +42,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DatosUsuariogroupBox = new System.Windows.Forms.GroupBox();
-            this.NombreUsuariotextBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.ContrasenatextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TipoUsuariocomboBox = new System.Windows.Forms.ComboBox();
             this.ActivocheckBox = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.TipoUsuariocomboBox = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ContrasenatextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.NombreUsuariotextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
@@ -81,7 +81,7 @@
             this.CedulamaskedTextBox.Location = new System.Drawing.Point(108, 71);
             this.CedulamaskedTextBox.Mask = "000-0000000-0";
             this.CedulamaskedTextBox.Name = "CedulamaskedTextBox";
-            this.CedulamaskedTextBox.Size = new System.Drawing.Size(101, 20);
+            this.CedulamaskedTextBox.Size = new System.Drawing.Size(119, 20);
             this.CedulamaskedTextBox.TabIndex = 5;
             // 
             // ApellidostextBox
@@ -128,7 +128,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(18, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(19, 13);
             this.label1.TabIndex = 1;
@@ -136,7 +136,7 @@
             // 
             // UsuarioIdnumericUpDown
             // 
-            this.UsuarioIdnumericUpDown.Location = new System.Drawing.Point(37, 12);
+            this.UsuarioIdnumericUpDown.Location = new System.Drawing.Point(43, 13);
             this.UsuarioIdnumericUpDown.Name = "UsuarioIdnumericUpDown";
             this.UsuarioIdnumericUpDown.Size = new System.Drawing.Size(101, 20);
             this.UsuarioIdnumericUpDown.TabIndex = 2;
@@ -144,7 +144,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(335, 19);
+            this.label2.Location = new System.Drawing.Point(335, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 3;
@@ -176,21 +176,47 @@
             this.DatosUsuariogroupBox.TabStop = false;
             this.DatosUsuariogroupBox.Text = "Datos del usuario";
             // 
-            // NombreUsuariotextBox
+            // ActivocheckBox
             // 
-            this.NombreUsuariotextBox.Location = new System.Drawing.Point(108, 19);
-            this.NombreUsuariotextBox.Name = "NombreUsuariotextBox";
-            this.NombreUsuariotextBox.Size = new System.Drawing.Size(335, 20);
-            this.NombreUsuariotextBox.TabIndex = 7;
+            this.ActivocheckBox.AutoSize = true;
+            this.ActivocheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActivocheckBox.ForeColor = System.Drawing.Color.Red;
+            this.ActivocheckBox.Location = new System.Drawing.Point(108, 99);
+            this.ActivocheckBox.Name = "ActivocheckBox";
+            this.ActivocheckBox.Size = new System.Drawing.Size(82, 20);
+            this.ActivocheckBox.TabIndex = 6;
+            this.ActivocheckBox.Text = "ACTIVO";
+            this.ActivocheckBox.UseVisualStyleBackColor = true;
+            this.ActivocheckBox.CheckedChanged += new System.EventHandler(this.ActivocheckBox_CheckedChanged);
             // 
-            // label6
+            // label9
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Nombre de usuario:";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 102);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Estado:";
+            // 
+            // TipoUsuariocomboBox
+            // 
+            this.TipoUsuariocomboBox.FormattingEnabled = true;
+            this.TipoUsuariocomboBox.Items.AddRange(new object[] {
+            "Administrador",
+            "Secretaria"});
+            this.TipoUsuariocomboBox.Location = new System.Drawing.Point(108, 71);
+            this.TipoUsuariocomboBox.Name = "TipoUsuariocomboBox";
+            this.TipoUsuariocomboBox.Size = new System.Drawing.Size(119, 21);
+            this.TipoUsuariocomboBox.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 74);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 13);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Tipo de usuario:";
             // 
             // ContrasenatextBox
             // 
@@ -208,46 +234,21 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "Contraseña:";
             // 
-            // label8
+            // NombreUsuariotextBox
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 74);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 13);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Tipo de usuario:";
+            this.NombreUsuariotextBox.Location = new System.Drawing.Point(108, 19);
+            this.NombreUsuariotextBox.Name = "NombreUsuariotextBox";
+            this.NombreUsuariotextBox.Size = new System.Drawing.Size(335, 20);
+            this.NombreUsuariotextBox.TabIndex = 7;
             // 
-            // TipoUsuariocomboBox
+            // label6
             // 
-            this.TipoUsuariocomboBox.FormattingEnabled = true;
-            this.TipoUsuariocomboBox.Items.AddRange(new object[] {
-            "Administrador/a",
-            "Secretario/a"});
-            this.TipoUsuariocomboBox.Location = new System.Drawing.Point(108, 71);
-            this.TipoUsuariocomboBox.Name = "TipoUsuariocomboBox";
-            this.TipoUsuariocomboBox.Size = new System.Drawing.Size(119, 21);
-            this.TipoUsuariocomboBox.TabIndex = 11;
-            // 
-            // ActivocheckBox
-            // 
-            this.ActivocheckBox.AutoSize = true;
-            this.ActivocheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActivocheckBox.ForeColor = System.Drawing.Color.Red;
-            this.ActivocheckBox.Location = new System.Drawing.Point(108, 99);
-            this.ActivocheckBox.Name = "ActivocheckBox";
-            this.ActivocheckBox.Size = new System.Drawing.Size(82, 20);
-            this.ActivocheckBox.TabIndex = 6;
-            this.ActivocheckBox.Text = "ACTIVO";
-            this.ActivocheckBox.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 102);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 13);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Estado:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Nombre de usuario:";
             // 
             // Nuevobutton
             // 
@@ -292,7 +293,7 @@
             // 
             this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Buscarbutton.Location = new System.Drawing.Point(144, 6);
+            this.Buscarbutton.Location = new System.Drawing.Point(150, 5);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(64, 32);
             this.Buscarbutton.TabIndex = 9;
