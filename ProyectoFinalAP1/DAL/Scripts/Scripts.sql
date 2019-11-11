@@ -44,6 +44,7 @@ Create table Clientes
 	Nombres varchar(60),
 	Apellidos varchar(60),
 	Cedula varchar(13) Unique,
+	Telefono varchar(13),
 	Direccion varchar(100),
 	Activo bit Default 0
 );

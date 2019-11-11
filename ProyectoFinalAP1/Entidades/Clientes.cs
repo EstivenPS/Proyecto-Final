@@ -16,6 +16,7 @@ namespace ProyectoFinalAP1.Entidades
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public string Cedula { get; set; }
+        public string Telefono { get; set; }
         public string Direccion { get; set; }
         public bool Activo { get; set; }
 
@@ -27,6 +28,7 @@ namespace ProyectoFinalAP1.Entidades
             Nombres = string.Empty;
             Apellidos = string.Empty;
             Cedula = string.Empty;
+            Telefono = string.Empty;
             Direccion = string.Empty;
             Activo = false;
         }

@@ -75,17 +75,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Consultas\CClientesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\CClientesForm.Designer.cs">
+      <DependentUpon>CClientesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Consultas\CCobradoresForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Consultas\CCobradoresForm.Designer.cs">
       <DependentUpon>CCobradoresForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\RClientesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\RClientesForm.Designer.cs">
+      <DependentUpon>RClientesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\RCobradoresForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Registros\RCobradoresForm.Designer.cs">
       <DependentUpon>RCobradoresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\RPrestamosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\RPrestamosForm.Designer.cs">
+      <DependentUpon>RPrestamosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\RUsuariosForm.cs">
       <SubType>Form</SubType>
@@ -105,11 +123,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\CClientesForm.resx">
+      <DependentUpon>CClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\CCobradoresForm.resx">
       <DependentUpon>CCobradoresForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\RClientesForm.resx">
+      <DependentUpon>RClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RCobradoresForm.resx">
       <DependentUpon>RCobradoresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\RPrestamosForm.resx">
+      <DependentUpon>RPrestamosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RUsuariosForm.resx">
       <DependentUpon>RUsuariosForm.cs</DependentUpon>

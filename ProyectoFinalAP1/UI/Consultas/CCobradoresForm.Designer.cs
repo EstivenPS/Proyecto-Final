@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CCobradoresForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,8 +37,8 @@
             this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.FiltrocomboBox = new System.Windows.Forms.ComboBox();
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
-            this.Consultarbutton = new System.Windows.Forms.Button();
             this.ConsultadataGridView = new System.Windows.Forms.DataGridView();
+            this.Consultarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,18 +116,8 @@
             // 
             this.CriteriotextBox.Location = new System.Drawing.Point(488, 9);
             this.CriteriotextBox.Name = "CriteriotextBox";
-            this.CriteriotextBox.Size = new System.Drawing.Size(195, 20);
+            this.CriteriotextBox.Size = new System.Drawing.Size(204, 20);
             this.CriteriotextBox.TabIndex = 7;
-            // 
-            // Consultarbutton
-            // 
-            this.Consultarbutton.Location = new System.Drawing.Point(689, 5);
-            this.Consultarbutton.Name = "Consultarbutton";
-            this.Consultarbutton.Size = new System.Drawing.Size(82, 27);
-            this.Consultarbutton.TabIndex = 8;
-            this.Consultarbutton.Text = "Consultar";
-            this.Consultarbutton.UseVisualStyleBackColor = true;
-            this.Consultarbutton.Click += new System.EventHandler(this.Consultarbutton_Click);
             // 
             // ConsultadataGridView
             // 
@@ -136,13 +127,26 @@
             this.ConsultadataGridView.Size = new System.Drawing.Size(756, 362);
             this.ConsultadataGridView.TabIndex = 9;
             // 
+            // Consultarbutton
+            // 
+            this.Consultarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Consultarbutton.Image")));
+            this.Consultarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Consultarbutton.Location = new System.Drawing.Point(698, 6);
+            this.Consultarbutton.Name = "Consultarbutton";
+            this.Consultarbutton.Size = new System.Drawing.Size(73, 27);
+            this.Consultarbutton.TabIndex = 19;
+            this.Consultarbutton.Text = "Consultar";
+            this.Consultarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Consultarbutton.UseVisualStyleBackColor = true;
+            this.Consultarbutton.Click += new System.EventHandler(this.Consultarbutton_Click_1);
+            // 
             // CCobradoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 415);
-            this.Controls.Add(this.ConsultadataGridView);
             this.Controls.Add(this.Consultarbutton);
+            this.Controls.Add(this.ConsultadataGridView);
             this.Controls.Add(this.CriteriotextBox);
             this.Controls.Add(this.FiltrocomboBox);
             this.Controls.Add(this.HastadateTimePicker);
@@ -169,7 +173,7 @@
         private System.Windows.Forms.DateTimePicker HastadateTimePicker;
         private System.Windows.Forms.ComboBox FiltrocomboBox;
         private System.Windows.Forms.TextBox CriteriotextBox;
-        private System.Windows.Forms.Button Consultarbutton;
         private System.Windows.Forms.DataGridView ConsultadataGridView;
+        private System.Windows.Forms.Button Consultarbutton;
     }
 }

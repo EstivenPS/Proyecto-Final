@@ -155,7 +155,7 @@ namespace ProyectoFinalAP1.UI.Registros
             }
             else
             {
-                MessageBox.Show("¡No se pudo guardar!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("¡No fue posible guardar!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -31,5 +31,12 @@ namespace ProyectoFinalAP1
             rc.MdiParent = this;
             rc.Show();
         }
+
+        private void registroDePrestamosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RPrestamosForm rp = new RPrestamosForm();
+            rp.MdiParent = this;
+            rp.Show();
+        }
     }
 }
