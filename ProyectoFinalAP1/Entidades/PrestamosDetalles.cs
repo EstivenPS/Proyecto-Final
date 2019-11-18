@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinalAP1.Entidades
 {
-    public class PrestamosDetalle
+    public class PrestamosDetalles
     {
         [Key]
         public int CuotaId { get; set; }
@@ -18,7 +18,7 @@ namespace ProyectoFinalAP1.Entidades
         public decimal Interes { get; set; }
         public decimal Balance { get; set; }
 
-        public PrestamosDetalle()
+        public PrestamosDetalles()
         {
             CuotaId = 0;
             PrestamoId = 0;
@@ -29,7 +29,7 @@ namespace ProyectoFinalAP1.Entidades
             Balance = 0;
         }
 
-        public PrestamosDetalle(int cuotaId, int prestamoId, DateTime fecha, int numerocuota, decimal capital, decimal interes, decimal balance)
+        public PrestamosDetalles(int cuotaId, int prestamoId, DateTime fecha, int numerocuota, decimal capital, decimal interes, decimal balance)
         {
             CuotaId = cuotaId;
             PrestamoId = prestamoId;

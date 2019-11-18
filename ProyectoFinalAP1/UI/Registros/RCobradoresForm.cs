@@ -81,6 +81,13 @@ namespace ProyectoFinalAP1.UI.Registros
             bool paso = true;
             MyerrorProvider.Clear();
 
+            if (UsuarioIdnumericUpDown.Value == 0)
+            {
+                MyerrorProvider.SetError(UsuarioIdnumericUpDown, "El campo Usuario Id no puede ser cero");
+                UsuarioIdnumericUpDown.Focus();
+                paso = false;
+            }
+
             if (string.IsNullOrWhiteSpace(NombrestextBox.Text))
             {
                 MyerrorProvider.SetError(NombrestextBox, "El campo Nombres no puede estar vacio");

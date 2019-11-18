@@ -342,7 +342,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DatosPersonalesgroupBox);
             this.Name = "RUsuariosForm";
-            this.Text = "Registro de Usuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Registro de usuarios";
             this.Load += new System.EventHandler(this.RUsuariosForm_Load);
             this.DatosPersonalesgroupBox.ResumeLayout(false);
             this.DatosPersonalesgroupBox.PerformLayout();

@@ -1,5 +1,6 @@
 ﻿using ProyectoFinalAP1.BLL;
 using ProyectoFinalAP1.Entidades;
+using ProyectoFinalAP1.UI.Ventanas_de_Dialogo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -139,7 +140,7 @@ namespace ProyectoFinalAP1.UI.Registros
         {
             bool paso = false;
             Usuarios usuario;
-            RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+            UsuariosRepositorio repositorio = new UsuariosRepositorio();
 
             if (!Validar())
                 return;
@@ -173,19 +174,19 @@ namespace ProyectoFinalAP1.UI.Registros
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             int id;
-            RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+            UsuariosRepositorio repositorio = new UsuariosRepositorio();
 
             int.TryParse(Convert.ToString(UsuarioIdnumericUpDown.Value), out id);
 
-            Limpiar();
-
-            if (repositorio.Eliminar(id))
+            if (repositorio.Buscar(id) != null)
             {
-                MessageBox.Show("¡Eliminado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                EliminarUsuariosVDForm EliminarVentanaDialogo = new EliminarUsuariosVDForm(id);
+                EliminarVentanaDialogo.ShowDialog();
+                Limpiar();
             }
             else
             {
-                MyerrorProvider.SetError(UsuarioIdnumericUpDown, "No se puede eliminar un usuario que no existe");
+                MyerrorProvider.SetError(UsuarioIdnumericUpDown, "No se puede eliminar o desactivar un usuario que no existe");
             }
         }
 
@@ -193,7 +194,7 @@ namespace ProyectoFinalAP1.UI.Registros
         {
             int id;
             Usuarios usuario = new Usuarios();
-            RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+            UsuariosRepositorio repositorio = new UsuariosRepositorio();
 
             int.TryParse(Convert.ToString(UsuarioIdnumericUpDown.Value), out id);
 
@@ -201,9 +202,17 @@ namespace ProyectoFinalAP1.UI.Registros
 
             usuario = repositorio.Buscar(id);
 
-            if(usuario != null)
+            if (usuario != null)
             {
-                LlenaCampos(usuario);
+                if (usuario.Activo)
+                    LlenaCampos(usuario);
+                else
+                {
+                    DialogResult resultado = MessageBox.Show("El cobrador se encuentra INACTIVO, ¿Desea buscarlo entre los usuarios INACTIVOS?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (resultado == DialogResult.Yes)
+                        LlenaCampos(usuario);
+                }
             }
             else
             {

@@ -13,12 +13,14 @@ namespace ProyectoFinalAP1.Entidades
         public int EmpresaId { get; set; }
         public string Nombre { get; set; }
         public string Direccion { get; set; }
+        public string Telefono { get; set; }
 
         public Empresas()
         {
             EmpresaId = 0;
             Nombre = string.Empty;
             Direccion = string.Empty;
+            Telefono = string.Empty;
         }
     }
 }

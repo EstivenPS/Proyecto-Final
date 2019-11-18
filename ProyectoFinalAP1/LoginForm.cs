@@ -69,6 +69,7 @@ namespace ProyectoFinalAP1
             Usuarios usuario = new Usuarios();
             List<Usuarios> Lista = new List<Usuarios>();
             bool paso = false;
+            MyerrorProvider.Clear();
 
             if (!Validar())
                 return;
@@ -98,6 +99,7 @@ namespace ProyectoFinalAP1
         private void LoginForm_Load(object sender, EventArgs e)
         {
             ContraseñatextBox.UseSystemPasswordChar = true;
+            MyerrorProvider.Clear();
         }
     }
 }

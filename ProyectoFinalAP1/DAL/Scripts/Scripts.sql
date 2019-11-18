@@ -6,7 +6,8 @@ Create table Empresas
 (
 	EmpresaId int Primary Key Identity,
 	Nombre varchar(50),
-	Direccion varchar(100)
+	Direccion varchar(100),
+	Telefono varchar(13)
 );
 Go
 Create table Usuarios
@@ -61,10 +62,11 @@ Create table Prestamos
 	Fecha date Default getdate(),
 	MontoPrestado decimal(9,2),
 	Interes decimal(9,2),
-	Balance decimal(9,2)
+	Balance decimal(9,2),
+	CantidadCuotas int
 );
 Go
-Create table PrestamosDetalle
+Create table PrestamosDetalles
 (
 	CuotaId int Primary Key Identity,
 	PrestamoId int Constraint FK_PrestamoId Foreign Key (PrestamoId) References Prestamos(PrestamoId) On Delete Cascade On Update Cascade,
@@ -81,6 +83,6 @@ Create table Cobros
 	PrestamoId int Constraint FK_PrestamoId_Cobros Foreign Key (PrestamoId) References Prestamos(PrestamoId) On Delete Cascade On Update Cascade,
 	UsuarioId int Constraint FK_UsuarioId_Cobros Foreign Key (UsuarioId) References Usuarios(UsuarioId),
 	Fecha date Default getdate(),
-	Monto decimal(9,2),
-	NumeroCuota int
+	NumeroCuota int,
+	Monto decimal(9,2)
 );

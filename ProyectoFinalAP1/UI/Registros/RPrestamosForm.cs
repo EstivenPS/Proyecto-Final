@@ -15,12 +15,12 @@ namespace ProyectoFinalAP1.UI.Registros
     public partial class RPrestamosForm : Form
     {
         private Usuarios usuario { get; set; }
-        public List<PrestamosDetalle> Detalle { get; set; }
+        public List<PrestamosDetalles> Detalle { get; set; }
 
         public RPrestamosForm(Usuarios usuario)
         {
             this.usuario = usuario;
-            this.Detalle = new List<PrestamosDetalle>();
+            this.Detalle = new List<PrestamosDetalles>();
             InitializeComponent();
         }
 
@@ -35,7 +35,7 @@ namespace ProyectoFinalAP1.UI.Registros
             CantidadCuotasnumericUpDown.Value = 0;
             MyerrorProvider.Clear();
 
-            this.Detalle = new List<PrestamosDetalle>();
+            this.Detalle = new List<PrestamosDetalles>();
             CargarGrid();
         }
 
@@ -46,12 +46,13 @@ namespace ProyectoFinalAP1.UI.Registros
             prestamo.PrestamoId = (int)PrestamoIdnumericUpDown.Value;
             prestamo.UsuarioId = (int)UsuarioIdnumericUpDown.Value;
             prestamo.Fecha = FechadateTimePicker.Value;
-            prestamo.ClienteId = ClientecomboBox.SelectedIndex;
-            prestamo.CobradorId = CobradorcomboBox.SelectedIndex;
-            prestamo.MontoPrestamo = Convert.ToDecimal(MontotextBox.Text);
+            prestamo.ClienteId = Convert.ToInt32(ClientecomboBox.SelectedValue);
+            prestamo.CobradorId = Convert.ToInt32(CobradorcomboBox.SelectedValue);
+            prestamo.MontoPrestado = Convert.ToDecimal(MontotextBox.Text);
             prestamo.Interes = Convert.ToDecimal(Intereslabel.Text);
             prestamo.Balance = Convert.ToDecimal(Balancelabel.Text);
             prestamo.CantidadCuotas = Convert.ToInt32(CantidadCuotasnumericUpDown.Value);
+            
             prestamo.Cuotas = this.Detalle;
 
             return prestamo;
@@ -59,14 +60,16 @@ namespace ProyectoFinalAP1.UI.Registros
 
         private void LlenaCampos(Prestamos prestamo)
         {
+            ClientesRepositorio repositorioCliente = new ClientesRepositorio();
+            CobradoresRepositorio repositorioCobrador = new CobradoresRepositorio();
+
             PrestamoIdnumericUpDown.Value = prestamo.PrestamoId;
             UsuarioIdnumericUpDown.Value = prestamo.UsuarioId;
             FechadateTimePicker.Value = prestamo.Fecha;
-            ClientecomboBox.SelectedIndex = prestamo.ClienteId;
-            CobradorcomboBox.SelectedIndex = prestamo.CobradorId;
-            MontotextBox.Text = Convert.ToString(prestamo.MontoPrestamo);
+            ClientecomboBox.Text = repositorioCliente.Buscar(prestamo.ClienteId).Nombres;
+            CobradorcomboBox.Text = repositorioCobrador.Buscar(prestamo.CobradorId).Nombres;
+            MontotextBox.Text = Convert.ToString(prestamo.MontoPrestado);
             CantidadCuotasnumericUpDown.Value = prestamo.CantidadCuotas;
-
             MyerrorProvider.Clear();
 
             this.Detalle = prestamo.Cuotas;
@@ -85,16 +88,23 @@ namespace ProyectoFinalAP1.UI.Registros
             bool paso = true;
             MyerrorProvider.Clear();
 
+            if (UsuarioIdnumericUpDown.Value == 0)
+            {
+                MyerrorProvider.SetError(UsuarioIdnumericUpDown, "El campo Usuario Id no puede ser cero");
+                UsuarioIdnumericUpDown.Focus();
+                paso = false;
+            }
+
             if (string.IsNullOrWhiteSpace(ClientecomboBox.Text))
             {
-                MyerrorProvider.SetError(ClientecomboBox, "El campo Cliente no puede estar vacio");
+                MyerrorProvider.SetError(ClientecomboBox, "Debe seleccionar un cliente");
                 ClientecomboBox.Focus();
                 paso = false;
             }
 
             if (string.IsNullOrWhiteSpace(CobradorcomboBox.Text))
             {
-                MyerrorProvider.SetError(CobradorcomboBox, "El campo Cobrador no puede estar vacio");
+                MyerrorProvider.SetError(CobradorcomboBox, "Debe seleccionar un cobrador");
                 CobradorcomboBox.Focus();
                 paso = false;
             }
@@ -208,13 +218,16 @@ namespace ProyectoFinalAP1.UI.Registros
         {
             DateTime fecha = FechadateTimePicker.Value;//Se almacena la fecha en la que se registró el prestamo
 
-            if (DetalledataGridView.DataSource != null)
-                this.Detalle = (List<PrestamosDetalle>)DetalledataGridView.DataSource;
+            //if (DetalledataGridView.DataSource != null)
+            //  this.Detalle = (List<PrestamosDetalles>)DetalledataGridView.DataSource;
 
-            for(int i = 0; i < (int)CantidadCuotasnumericUpDown.Value; i++)
+            DetalledataGridView.Rows.Clear();//Limpia las filas del DataGridView
+
+            for (int i = 0; i < (int)CantidadCuotasnumericUpDown.Value; i++)
             {
+
                 this.Detalle.Add(
-                    new PrestamosDetalle(
+                    new PrestamosDetalles(
                         cuotaId: 0,
                         prestamoId: 0,
                         fecha: fecha,
@@ -224,9 +237,6 @@ namespace ProyectoFinalAP1.UI.Registros
                         balance: (Convert.ToDecimal(MontotextBox.Text) / CantidadCuotasnumericUpDown.Value) + (Convert.ToDecimal(Intereslabel.Text) / CantidadCuotasnumericUpDown.Value)
                         )
                     );
-
-                fecha = fecha.AddDays(7);//Se le suma una semana a la fecha almacenada, la cual va cambiando en cada cuota
-                                         // indicando que el prestamo es semanal
             }
 
             CargarGrid();
@@ -235,6 +245,7 @@ namespace ProyectoFinalAP1.UI.Registros
         private void CargarGrid()
         {
             DetalledataGridView.DataSource = null;
+            DetalledataGridView.Rows.Clear();//Limpia las filas del DataGridView
 
             foreach (var item in this.Detalle)
             {

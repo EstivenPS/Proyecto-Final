@@ -316,7 +316,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "RCobradoresForm";
-            this.Text = "Registro de Cobradores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Registro de cobradores";
             this.Load += new System.EventHandler(this.RCobradoresForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CobradorIdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();

@@ -38,7 +38,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.ClienteIdnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.NombrestextBox = new System.Windows.Forms.TextBox();
@@ -48,7 +47,6 @@
             this.TelefonomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.ActivocheckBox = new System.Windows.Forms.CheckBox();
-            this.BalancetextBox = new System.Windows.Forms.TextBox();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
@@ -131,15 +129,6 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Dirección:";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 278);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Balance:";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -215,19 +204,11 @@
             this.ActivocheckBox.UseVisualStyleBackColor = true;
             this.ActivocheckBox.CheckedChanged += new System.EventHandler(this.ActivocheckBox_CheckedChanged);
             // 
-            // BalancetextBox
-            // 
-            this.BalancetextBox.Location = new System.Drawing.Point(78, 275);
-            this.BalancetextBox.Name = "BalancetextBox";
-            this.BalancetextBox.ReadOnly = true;
-            this.BalancetextBox.Size = new System.Drawing.Size(321, 20);
-            this.BalancetextBox.TabIndex = 17;
-            // 
             // Eliminarbutton
             // 
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(320, 310);
+            this.Eliminarbutton.Location = new System.Drawing.Point(321, 276);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(80, 39);
             this.Eliminarbutton.TabIndex = 24;
@@ -240,7 +221,7 @@
             // 
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(168, 310);
+            this.Guardarbutton.Location = new System.Drawing.Point(169, 276);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(80, 39);
             this.Guardarbutton.TabIndex = 23;
@@ -253,7 +234,7 @@
             // 
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(14, 310);
+            this.Nuevobutton.Location = new System.Drawing.Point(15, 276);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(80, 39);
             this.Nuevobutton.TabIndex = 22;
@@ -328,7 +309,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 352);
+            this.ClientSize = new System.Drawing.Size(415, 323);
             this.Controls.Add(this.UsuarioIdnumericUpDown);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.EmailtextBox);
@@ -339,7 +320,6 @@
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.Buscarbutton);
-            this.Controls.Add(this.BalancetextBox);
             this.Controls.Add(this.ActivocheckBox);
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.TelefonomaskedTextBox);
@@ -349,7 +329,6 @@
             this.Controls.Add(this.NombrestextBox);
             this.Controls.Add(this.ClienteIdnumericUpDown);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -359,7 +338,7 @@
             this.Controls.Add(this.label1);
             this.Name = "RClientesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registro de Clientes";
+            this.Text = "Registro de clientes";
             this.Load += new System.EventHandler(this.RClientesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteIdnumericUpDown)).EndInit();
@@ -372,7 +351,6 @@
         #endregion
 
         private System.Windows.Forms.ErrorProvider MyerrorProvider;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -388,7 +366,6 @@
         private System.Windows.Forms.TextBox ApellidostextBox;
         private System.Windows.Forms.TextBox NombrestextBox;
         private System.Windows.Forms.NumericUpDown ClienteIdnumericUpDown;
-        private System.Windows.Forms.TextBox BalancetextBox;
         private System.Windows.Forms.CheckBox ActivocheckBox;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Guardarbutton;

@@ -34,6 +34,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.CuotasgroupBox = new System.Windows.Forms.GroupBox();
             this.DetalledataGridView = new System.Windows.Forms.DataGridView();
+            this.NumeroCuota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Capital = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Interes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
@@ -56,11 +61,6 @@
             this.Intereslabel = new System.Windows.Forms.Label();
             this.Balancelabel = new System.Windows.Forms.Label();
             this.MontotextBox = new System.Windows.Forms.TextBox();
-            this.NumeroCuota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Capital = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Interes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.CuotasgroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).BeginInit();
@@ -94,6 +94,8 @@
             // 
             // DetalledataGridView
             // 
+            this.DetalledataGridView.AllowUserToAddRows = false;
+            this.DetalledataGridView.AllowUserToDeleteRows = false;
             this.DetalledataGridView.ColumnHeadersHeight = 35;
             this.DetalledataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NumeroCuota,
@@ -103,8 +105,43 @@
             this.Balance});
             this.DetalledataGridView.Location = new System.Drawing.Point(14, 21);
             this.DetalledataGridView.Name = "DetalledataGridView";
+            this.DetalledataGridView.ReadOnly = true;
+            this.DetalledataGridView.RowHeadersWidth = 10;
             this.DetalledataGridView.Size = new System.Drawing.Size(445, 176);
             this.DetalledataGridView.TabIndex = 0;
+            // 
+            // NumeroCuota
+            // 
+            this.NumeroCuota.HeaderText = "Numero de Cuota";
+            this.NumeroCuota.Name = "NumeroCuota";
+            this.NumeroCuota.ReadOnly = true;
+            this.NumeroCuota.Width = 60;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 75;
+            // 
+            // Capital
+            // 
+            this.Capital.HeaderText = "Capital";
+            this.Capital.Name = "Capital";
+            this.Capital.ReadOnly = true;
+            // 
+            // Interes
+            // 
+            this.Interes.HeaderText = "Interes";
+            this.Interes.Name = "Interes";
+            this.Interes.ReadOnly = true;
+            // 
+            // Balance
+            // 
+            this.Balance.HeaderText = "Balance";
+            this.Balance.Name = "Balance";
+            this.Balance.ReadOnly = true;
+            this.Balance.Width = 150;
             // 
             // FechadateTimePicker
             // 
@@ -199,7 +236,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 37;
-            this.label1.Text = "Prestamo Id:";
+            this.label1.Text = "Préstamo Id:";
             // 
             // CalcularCuotasbutton
             // 
@@ -313,38 +350,6 @@
             this.MontotextBox.TextChanged += new System.EventHandler(this.MontotextBox_TextChanged);
             this.MontotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MontotextBox_KeyPress);
             // 
-            // NumeroCuota
-            // 
-            this.NumeroCuota.HeaderText = "Numero de Cuota";
-            this.NumeroCuota.Name = "NumeroCuota";
-            this.NumeroCuota.ReadOnly = true;
-            this.NumeroCuota.Width = 60;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 75;
-            // 
-            // Capital
-            // 
-            this.Capital.HeaderText = "Capital";
-            this.Capital.Name = "Capital";
-            this.Capital.ReadOnly = true;
-            // 
-            // Interes
-            // 
-            this.Interes.HeaderText = "Interes";
-            this.Interes.Name = "Interes";
-            this.Interes.ReadOnly = true;
-            // 
-            // Balance
-            // 
-            this.Balance.HeaderText = "Balance";
-            this.Balance.Name = "Balance";
-            this.Balance.ReadOnly = true;
-            // 
             // RPrestamosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,7 +380,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.CuotasgroupBox);
             this.Name = "RPrestamosForm";
-            this.Text = "Registro de Prestamos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Registro de préstamos";
             this.Load += new System.EventHandler(this.RPrestamosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.CuotasgroupBox.ResumeLayout(false);

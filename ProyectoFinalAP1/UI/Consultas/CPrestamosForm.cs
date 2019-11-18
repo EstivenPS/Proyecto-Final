@@ -12,49 +12,44 @@ using System.Windows.Forms;
 
 namespace ProyectoFinalAP1.UI.Consultas
 {
-    public partial class CClientesForm : Form
+    public partial class CPrestamosForm : Form
     {
-        public CClientesForm()
+        public CPrestamosForm()
         {
             InitializeComponent();
         }
 
         private void Consultarbutton_Click(object sender, EventArgs e)
         {
-            var listado = new List<Clientes>();
-            ClientesRepositorio repositorio = new ClientesRepositorio();
+            var listado = new List<Prestamos>();
+            PrestamosRepositorio repositorioPrestamo = new PrestamosRepositorio();
 
             if (CriteriotextBox.Text.Trim().Length > 0)
             {
                 switch (FiltrocomboBox.SelectedIndex)
                 {
                     case 0://Todos
-                        listado = repositorio.GetList(c => true);
+                        listado = repositorioPrestamo.GetList(c => true);
                         break;
 
-                    case 1://Id
+                    case 1://Prestamo Id
                         int id = Convert.ToInt32(CriteriotextBox.Text);
-                        listado = repositorio.GetList(c => c.ClienteId == id);
+                        listado = repositorioPrestamo.GetList(c => c.ClienteId == id);
                         break;
 
-                    case 2://Nombres
-                        listado = repositorio.GetList(c => c.Nombres.Contains(CriteriotextBox.Text));
+                    case 2://Cliente Id
+                        int ClienteId = Convert.ToInt32(CriteriotextBox.Text);
+                        listado = repositorioPrestamo.GetList(c => c.ClienteId == ClienteId);
                         break;
 
-                    case 3://Apellidos
-                        listado = repositorio.GetList(c => c.Apellidos.Contains(CriteriotextBox.Text));
+                    case 3://Cobrador Id
+                        int CobradorId = Convert.ToInt32(CriteriotextBox.Text);
+                        listado = repositorioPrestamo.GetList(c => c.CobradorId == CobradorId);
                         break;
 
-                    case 4://Direccion
-                        listado = repositorio.GetList(c => c.Direccion.Contains(CriteriotextBox.Text));
-                        break;
-
-                    case 5://Activo
-                        listado = repositorio.GetList(c => c.Activo == true);
-                        break;
-
-                    case 6://Inactivo
-                        listado = repositorio.GetList(c => c.Activo == false);
+                    case 4://Balance
+                        decimal balance = Convert.ToDecimal(CriteriotextBox.Text);
+                        listado = repositorioPrestamo.GetList(c => c.Balance == balance);
                         break;
                 }
 
@@ -62,7 +57,7 @@ namespace ProyectoFinalAP1.UI.Consultas
             }
             else
             {
-                listado = repositorio.GetList(c => true);
+                listado = repositorioPrestamo.GetList(c => true);
             }
 
             ConsultadataGridView.DataSource = null;

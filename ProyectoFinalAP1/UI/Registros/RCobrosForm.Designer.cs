@@ -38,7 +38,6 @@
             this.CobroIdnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.PrestamoIdnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.MontonumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.UsuarioIdnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.Eliminarbutton = new System.Windows.Forms.Button();
@@ -47,9 +46,9 @@
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.NumeroCuotacomboBox = new System.Windows.Forms.ComboBox();
             this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.MontotextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.CobroIdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrestamoIdnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MontonumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioIdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -59,9 +58,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 13);
+            this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Id:";
+            this.label1.Text = "Cobro Id:";
             // 
             // label2
             // 
@@ -79,7 +78,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Prestamo Id:";
+            this.label3.Text = "Préstamo Id:";
             // 
             // label4
             // 
@@ -112,6 +111,7 @@
             this.PrestamoIdnumericUpDown.Name = "PrestamoIdnumericUpDown";
             this.PrestamoIdnumericUpDown.Size = new System.Drawing.Size(72, 20);
             this.PrestamoIdnumericUpDown.TabIndex = 6;
+            this.PrestamoIdnumericUpDown.ValueChanged += new System.EventHandler(this.PrestamoIdnumericUpDown_ValueChanged);
             // 
             // FechadateTimePicker
             // 
@@ -121,14 +121,6 @@
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(81, 20);
             this.FechadateTimePicker.TabIndex = 7;
-            // 
-            // MontonumericUpDown
-            // 
-            this.MontonumericUpDown.DecimalPlaces = 2;
-            this.MontonumericUpDown.Location = new System.Drawing.Point(111, 111);
-            this.MontonumericUpDown.Name = "MontonumericUpDown";
-            this.MontonumericUpDown.Size = new System.Drawing.Size(293, 20);
-            this.MontonumericUpDown.TabIndex = 9;
             // 
             // UsuarioIdnumericUpDown
             // 
@@ -150,7 +142,7 @@
             // 
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(325, 141);
+            this.Eliminarbutton.Location = new System.Drawing.Point(325, 142);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(80, 39);
             this.Eliminarbutton.TabIndex = 14;
@@ -163,7 +155,7 @@
             // 
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(176, 141);
+            this.Guardarbutton.Location = new System.Drawing.Point(176, 142);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(80, 39);
             this.Guardarbutton.TabIndex = 13;
@@ -176,7 +168,7 @@
             // 
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(17, 141);
+            this.Nuevobutton.Location = new System.Drawing.Point(17, 142);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(80, 39);
             this.Nuevobutton.TabIndex = 12;
@@ -189,7 +181,7 @@
             // 
             this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Buscarbutton.Location = new System.Drawing.Point(207, 5);
+            this.Buscarbutton.Location = new System.Drawing.Point(192, 4);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(64, 25);
             this.Buscarbutton.TabIndex = 15;
@@ -203,18 +195,28 @@
             this.NumeroCuotacomboBox.FormattingEnabled = true;
             this.NumeroCuotacomboBox.Location = new System.Drawing.Point(111, 85);
             this.NumeroCuotacomboBox.Name = "NumeroCuotacomboBox";
-            this.NumeroCuotacomboBox.Size = new System.Drawing.Size(41, 21);
+            this.NumeroCuotacomboBox.Size = new System.Drawing.Size(72, 21);
             this.NumeroCuotacomboBox.TabIndex = 16;
             // 
             // MyerrorProvider
             // 
             this.MyerrorProvider.ContainerControl = this;
             // 
+            // MontotextBox
+            // 
+            this.MontotextBox.Location = new System.Drawing.Point(111, 112);
+            this.MontotextBox.Name = "MontotextBox";
+            this.MontotextBox.Size = new System.Drawing.Size(293, 20);
+            this.MontotextBox.TabIndex = 17;
+            this.MontotextBox.TextChanged += new System.EventHandler(this.MontotextBox_TextChanged);
+            this.MontotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MontotextBox_KeyPress);
+            // 
             // RCobrosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 188);
+            this.ClientSize = new System.Drawing.Size(421, 192);
+            this.Controls.Add(this.MontotextBox);
             this.Controls.Add(this.NumeroCuotacomboBox);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Eliminarbutton);
@@ -222,7 +224,6 @@
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.UsuarioIdnumericUpDown);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.MontonumericUpDown);
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.PrestamoIdnumericUpDown);
             this.Controls.Add(this.CobroIdnumericUpDown);
@@ -232,10 +233,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "RCobrosForm";
-            this.Text = "Registro de Cobros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Registro de cobros";
+            this.Load += new System.EventHandler(this.RCobrosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CobroIdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrestamoIdnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MontonumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioIdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);
@@ -253,7 +255,6 @@
         private System.Windows.Forms.NumericUpDown CobroIdnumericUpDown;
         private System.Windows.Forms.NumericUpDown PrestamoIdnumericUpDown;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
-        private System.Windows.Forms.NumericUpDown MontonumericUpDown;
         private System.Windows.Forms.NumericUpDown UsuarioIdnumericUpDown;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Eliminarbutton;
@@ -262,5 +263,6 @@
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.ComboBox NumeroCuotacomboBox;
         private System.Windows.Forms.ErrorProvider MyerrorProvider;
+        private System.Windows.Forms.TextBox MontotextBox;
     }
 }

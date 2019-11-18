@@ -1,5 +1,4 @@
 ﻿using ProyectoFinalAP1.BLL;
-using ProyectoFinalAP1.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,26 +9,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoFinalAP1.UI
+namespace ProyectoFinalAP1.UI.Ventanas_de_Dialogo
 {
-    public partial class EliminarCobradoresVDForm : Form
+    public partial class EliminarUsuariosVDForm : Form
     {
-        private int CobradorId { get; set; }
+        private int UsuarioId { get; set; }
 
-        public EliminarCobradoresVDForm(int id)
+        public EliminarUsuariosVDForm(int id)
         {
-            CobradorId = id;
+            this.UsuarioId = id;
             InitializeComponent();
         }
 
         private void EliminarVDbutton_Click(object sender, EventArgs e)
         {
-            CobradoresRepositorio repositorio = new CobradoresRepositorio();
+            UsuariosRepositorio repositorio = new UsuariosRepositorio();
             DialogResult resultado = MessageBox.Show("¿Está seguro que desea ELIMINAR permanentemente este registro?", "¡Peligro!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (resultado == DialogResult.Yes)
             {
-                if (repositorio.Eliminar(CobradorId))
+                if (repositorio.Eliminar(UsuarioId))
                 {
                     MessageBox.Show("¡Eliminado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
@@ -41,12 +40,12 @@ namespace ProyectoFinalAP1.UI
 
         private void DesactivarVDbutton_Click(object sender, EventArgs e)
         {
-            CobradoresRepositorio repositorio = new CobradoresRepositorio();
+            UsuariosRepositorio repositorio = new UsuariosRepositorio();
             DialogResult resultado = MessageBox.Show("¿Está seguro que desea DESACTIVAR este registro?", "¡Peligro!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (resultado == DialogResult.Yes)
             {
-                if (repositorio.Desactivar(CobradorId))
+                if (repositorio.Desactivar(UsuarioId))
                 {
                     MessageBox.Show("¡Desactivado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();

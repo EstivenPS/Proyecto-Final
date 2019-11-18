@@ -17,7 +17,7 @@ namespace ProyectoFinalAP1.UI
 
         public EliminarClientesVDForm(int id)
         {
-            ClienteId = id;
+            this.ClienteId = id;
             InitializeComponent();
         }
 
@@ -33,6 +33,8 @@ namespace ProyectoFinalAP1.UI
                     MessageBox.Show("¡Eliminado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
+                else
+                    MessageBox.Show("¡No fue posible eliminar el registro!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -48,6 +50,8 @@ namespace ProyectoFinalAP1.UI
                     MessageBox.Show("¡Desactivado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
+                else
+                    MessageBox.Show("¡No fue posible desactivar el registro!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -35,7 +35,6 @@ namespace ProyectoFinalAP1.UI.Registros
             CelularmaskedTextBox.Text = string.Empty;
             DirecciontextBox.Text = string.Empty;
             ActivocheckBox.Checked = true;
-            BalancetextBox.Text = "0.00";
             MyerrorProvider.Clear();
         }
 
@@ -84,6 +83,13 @@ namespace ProyectoFinalAP1.UI.Registros
         {
             bool paso = true;
             MyerrorProvider.Clear();
+
+            if (UsuarioIdnumericUpDown.Value == 0)
+            {
+                MyerrorProvider.SetError(UsuarioIdnumericUpDown, "El campo Usuario Id no puede ser cero");
+                UsuarioIdnumericUpDown.Focus();
+                paso = false;
+            }
 
             if (string.IsNullOrWhiteSpace(NombrestextBox.Text))
             {
@@ -142,7 +148,7 @@ namespace ProyectoFinalAP1.UI.Registros
             Limpiar();
         }
 
-        private void Guardarbutton_Click(object sender, EventArgs e)//todo: (OPCIONAL) HACER QUE SE CALCULE Y SE PRESENTE EL BALANCE DEL CLIENTE EN BASE AL TOTAL DE TODOS LOS PRESTAMOS QUE NO HAYA PAGADO
+        private void Guardarbutton_Click(object sender, EventArgs e)
         {
             bool paso = false;
             Clientes cliente;
@@ -242,7 +248,6 @@ namespace ProyectoFinalAP1.UI.Registros
         private void RClientesForm_Load(object sender, EventArgs e)
         {
             UsuarioIdnumericUpDown.Value = usuario.UsuarioId;
-            BalancetextBox.Text = "0.00";
             ActivocheckBox.Checked = true;
         }
     }

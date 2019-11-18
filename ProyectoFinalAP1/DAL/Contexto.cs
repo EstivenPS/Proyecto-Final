@@ -14,7 +14,7 @@ namespace ProyectoFinalAP1.DAL
         public DbSet<Usuarios> Usuario { get; set; }
         public DbSet<Cobradores> Cobrador { get; set; }
         public DbSet<Clientes> Cliente { get; set; }
-        public DbSet<Prestamos> Prestamo { get; set; }
+        public DbSet<Prestamos> Prestamos { get; set; }
         public DbSet<Cobros> Cobro { get; set; }
 
         public Contexto() : base("ConStr") { }

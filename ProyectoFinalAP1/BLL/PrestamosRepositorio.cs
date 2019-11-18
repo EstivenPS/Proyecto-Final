@@ -16,7 +16,7 @@ namespace ProyectoFinalAP1.BLL
 
             try
             {
-                var Anterior = _contexto.Prestamo.Find(prestamo.PrestamoId);
+                var Anterior = _contexto.Prestamos.Find(prestamo.PrestamoId);
                 foreach (var item in Anterior.Cuotas)
                 {
                     if (!prestamo.Cuotas.Exists(d => d.PrestamoId == item.PrestamoId))
