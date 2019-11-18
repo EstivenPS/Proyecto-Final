@@ -1,4 +1,6 @@
-﻿using ProyectoFinalAP1.UI.Registros;
+﻿using ProyectoFinalAP1.Entidades;
+using ProyectoFinalAP1.UI;
+using ProyectoFinalAP1.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +15,11 @@ namespace ProyectoFinalAP1
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        private Usuarios usuario { get; set; }
+
+        public MainForm(Usuarios usuario)
         {
+            this.usuario = usuario;
             InitializeComponent();
         }
 
@@ -27,16 +32,30 @@ namespace ProyectoFinalAP1
 
         private void registroDeCobradoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RCobradoresForm rc = new RCobradoresForm();
-            rc.MdiParent = this;
-            rc.Show();
+            RCobradoresForm rcob = new RCobradoresForm(usuario);
+            rcob.MdiParent = this;
+            rcob.Show();
         }
 
         private void registroDePrestamosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RPrestamosForm rp = new RPrestamosForm();
+            RPrestamosForm rp = new RPrestamosForm(usuario);
             rp.MdiParent = this;
             rp.Show();
+        }
+
+        private void registroDeCobrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RCobrosForm rco = new RCobrosForm();
+            rco.MdiParent = this;
+            rco.Show();
+        }
+
+        private void registroDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RClientesForm rcli = new RClientesForm(usuario);
+            rcli.MdiParent = this;
+            rcli.Show();
         }
     }
 }

@@ -11,15 +11,19 @@ namespace ProyectoFinalAP1.Entidades
     {
         [Key]
         public int CobroId { get; set; }
+        public int UsuarioId { get; set; }
         public int PrestamoId { get; set; }
         public DateTime Fecha { get; set; }
+        public int NumeroCuota { get; set; }
         public decimal Monto { get; set; }
 
         public Cobros()
         {
             CobroId = 0;
+            UsuarioId = 0;
             PrestamoId = 0;
             Fecha = DateTime.Now;
+            NumeroCuota = 0;
             Monto = 0;
         }
     }

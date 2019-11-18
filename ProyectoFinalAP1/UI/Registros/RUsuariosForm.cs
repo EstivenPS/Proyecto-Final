@@ -26,10 +26,11 @@ namespace ProyectoFinalAP1.UI.Registros
             NombrestextBox.Text = string.Empty;
             ApellidostextBox.Text = string.Empty;
             CedulamaskedTextBox.Text = string.Empty;
+            EmailtextBox.Text = string.Empty;
             NombreUsuariotextBox.Text = string.Empty;
             ContrasenatextBox.Text = string.Empty;
             TipoUsuariocomboBox.Text = string.Empty;
-            ActivocheckBox.Checked = false;
+            ActivocheckBox.Checked = true;
             MyerrorProvider.Clear();
         }
 
@@ -42,6 +43,7 @@ namespace ProyectoFinalAP1.UI.Registros
             usuario.Nombres = NombrestextBox.Text;
             usuario.Apellidos = ApellidostextBox.Text;
             usuario.Cedula = CedulamaskedTextBox.Text;
+            usuario.Email = EmailtextBox.Text;
             usuario.NombreUsuario = NombreUsuariotextBox.Text;
             usuario.ClaveUsuario = ContrasenatextBox.Text;
             usuario.TipoUsuario = TipoUsuariocomboBox.SelectedIndex;
@@ -57,6 +59,7 @@ namespace ProyectoFinalAP1.UI.Registros
             NombrestextBox.Text = usuario.Nombres;
             ApellidostextBox.Text = usuario.Apellidos;
             CedulamaskedTextBox.Text = usuario.Cedula;
+            EmailtextBox.Text = usuario.Email;
             NombreUsuariotextBox.Text = usuario.NombreUsuario;
             ContrasenatextBox.Text = usuario.ClaveUsuario;
             TipoUsuariocomboBox.SelectedIndex = usuario.TipoUsuario;
@@ -73,8 +76,9 @@ namespace ProyectoFinalAP1.UI.Registros
         private bool Validar()
         {
             bool paso = true;
+            MyerrorProvider.Clear();
 
-            if(string.IsNullOrWhiteSpace(NombrestextBox.Text))
+            if (string.IsNullOrWhiteSpace(NombrestextBox.Text))
             {
                 MyerrorProvider.SetError(NombrestextBox, "El campo Nombres no puede estar vacio");
                 NombrestextBox.Focus();
@@ -88,10 +92,17 @@ namespace ProyectoFinalAP1.UI.Registros
                 paso = false;
             }
 
-            if (string.IsNullOrWhiteSpace(CedulamaskedTextBox.Text.Replace(' ', '-')))
+            if (string.IsNullOrWhiteSpace(CedulamaskedTextBox.Text.Replace("-", "")))
             {
-                MyerrorProvider.SetError(CedulamaskedTextBox, "El campo Cedula no puede estar vacio");
+                MyerrorProvider.SetError(CedulamaskedTextBox, "El campo Cédula no puede estar vacio");
                 CedulamaskedTextBox.Focus();
+                paso = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(EmailtextBox.Text))
+            {
+                MyerrorProvider.SetError(EmailtextBox, "El campo Email no puede estar vacio");
+                EmailtextBox.Focus();
                 paso = false;
             }
 
@@ -203,9 +214,20 @@ namespace ProyectoFinalAP1.UI.Registros
         private void ActivocheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (ActivocheckBox.Checked)
+            {
+                ActivocheckBox.Text = "ACTIVO";
                 ActivocheckBox.ForeColor = Color.Green;
+            }
             else
+            {
+                ActivocheckBox.Text = "INACTIVO";
                 ActivocheckBox.ForeColor = Color.Red;
+            }
+        }
+
+        private void RUsuariosForm_Load(object sender, EventArgs e)
+        {
+            ActivocheckBox.Checked = true;
         }
     }
 }

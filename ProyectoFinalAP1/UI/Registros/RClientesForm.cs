@@ -14,21 +14,27 @@ namespace ProyectoFinalAP1.UI.Registros
 {
     public partial class RClientesForm : Form
     {
-        public RClientesForm()
+        private Usuarios usuario { get; set; }
+
+        public RClientesForm(Usuarios usuario)
         {
+            this.usuario = usuario;
             InitializeComponent();
         }
         
         private void Limpiar()
         {
             ClienteIdnumericUpDown.Value = 0;
+            UsuarioIdnumericUpDown.Value = 0;
             FechadateTimePicker.Value = DateTime.Now;
             NombrestextBox.Text = string.Empty;
             ApellidostextBox.Text = string.Empty;
             CedulamaskedTextBox.Text = string.Empty;
+            EmailtextBox.Text = string.Empty;
             TelefonomaskedTextBox.Text = string.Empty;
+            CelularmaskedTextBox.Text = string.Empty;
             DirecciontextBox.Text = string.Empty;
-            ActivocheckBox.Checked = false;
+            ActivocheckBox.Checked = true;
             BalancetextBox.Text = "0.00";
             MyerrorProvider.Clear();
         }
@@ -38,11 +44,14 @@ namespace ProyectoFinalAP1.UI.Registros
             Clientes cliente = new Clientes();
 
             cliente.ClienteId = (int)ClienteIdnumericUpDown.Value;
+            cliente.UsuarioId = (int)UsuarioIdnumericUpDown.Value;
             cliente.Fecha = FechadateTimePicker.Value;
             cliente.Nombres = NombrestextBox.Text;
             cliente.Apellidos = ApellidostextBox.Text;
             cliente.Cedula = CedulamaskedTextBox.Text;
+            cliente.Email = EmailtextBox.Text;
             cliente.Telefono = TelefonomaskedTextBox.Text;
+            cliente.Celular = CelularmaskedTextBox.Text;
             cliente.Direccion = DirecciontextBox.Text;
             cliente.Activo = ActivocheckBox.Checked;
             
@@ -52,25 +61,29 @@ namespace ProyectoFinalAP1.UI.Registros
         private void LlenaCampos(Clientes cliente)
         {
             ClienteIdnumericUpDown.Value = cliente.ClienteId;
+            UsuarioIdnumericUpDown.Value = cliente.UsuarioId;
             FechadateTimePicker.Value = cliente.Fecha;
             NombrestextBox.Text = cliente.Nombres;
             ApellidostextBox.Text = cliente.Apellidos;
             CedulamaskedTextBox.Text = cliente.Cedula;
+            EmailtextBox.Text = cliente.Email;
             TelefonomaskedTextBox.Text = cliente.Telefono;
+            CelularmaskedTextBox.Text = cliente.Celular;
             DirecciontextBox.Text = cliente.Direccion;
             ActivocheckBox.Checked = cliente.Activo;
         }
 
         private bool ExisteEnLaBaseDeDatos()
         {
-            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
+            ClientesRepositorio repositorio = new ClientesRepositorio();
             Clientes cliente = repositorio.Buscar((int)ClienteIdnumericUpDown.Value);
-            return cliente != null;
+            return (cliente != null);
         }
 
         private bool Validar()
         {
             bool paso = true;
+            MyerrorProvider.Clear();
 
             if (string.IsNullOrWhiteSpace(NombrestextBox.Text))
             {
@@ -88,22 +101,36 @@ namespace ProyectoFinalAP1.UI.Registros
 
             if (string.IsNullOrWhiteSpace(DirecciontextBox.Text))
             {
-                MyerrorProvider.SetError(DirecciontextBox, "El campo Direccion no puede estar vacio");
+                MyerrorProvider.SetError(DirecciontextBox, "El campo Dirección no puede estar vacio");
                 DirecciontextBox.Focus();
                 paso = false;
             }
 
-            if (string.IsNullOrWhiteSpace(CedulamaskedTextBox.Text.Replace(' ', '-')))
+            if (string.IsNullOrWhiteSpace(CedulamaskedTextBox.Text.Replace("-", "")))
             {
-                MyerrorProvider.SetError(CedulamaskedTextBox, "El campo Cedula no puede estar vacio");
+                MyerrorProvider.SetError(CedulamaskedTextBox, "El campo Cédula no puede estar vacio");
                 CedulamaskedTextBox.Focus();
                 paso = false;
             }
 
-            if (string.IsNullOrWhiteSpace(TelefonomaskedTextBox.Text))
+            if (string.IsNullOrWhiteSpace(EmailtextBox.Text))
             {
-                MyerrorProvider.SetError(TelefonomaskedTextBox, "El campo Telefono no puede estar vacio");
+                MyerrorProvider.SetError(EmailtextBox, "El campo Email no puede estar vacio");
+                EmailtextBox.Focus();
+                paso = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(TelefonomaskedTextBox.Text.Replace("-", "")))
+            {
+                MyerrorProvider.SetError(TelefonomaskedTextBox, "El campo Teléfono no puede estar vacio");
                 TelefonomaskedTextBox.Focus();
+                paso = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(CelularmaskedTextBox.Text.Replace("-", "")))
+            {
+                MyerrorProvider.SetError(CelularmaskedTextBox, "El campo Celular no puede estar vacio");
+                CelularmaskedTextBox.Focus();
                 paso = false;
             }
 
@@ -115,11 +142,11 @@ namespace ProyectoFinalAP1.UI.Registros
             Limpiar();
         }
 
-        private void Guardarbutton_Click(object sender, EventArgs e)//todo: HACER QUE SE CALCULE Y SE PRESENTE EL BALANCE DEL CLIENTE EN BASE AL TOTAL DE TODOS LOS PRESTAMOS QUE HAYA TOMADO
+        private void Guardarbutton_Click(object sender, EventArgs e)//todo: (OPCIONAL) HACER QUE SE CALCULE Y SE PRESENTE EL BALANCE DEL CLIENTE EN BASE AL TOTAL DE TODOS LOS PRESTAMOS QUE NO HAYA PAGADO
         {
             bool paso = false;
             Clientes cliente;
-            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
+            ClientesRepositorio repositorio = new ClientesRepositorio();
 
             if (!Validar())
                 return;
@@ -132,7 +159,7 @@ namespace ProyectoFinalAP1.UI.Registros
             {
                 if(!ExisteEnLaBaseDeDatos())
                 {
-                    MessageBox.Show("No se puede modificar un cliene que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se puede modificar un cliente que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -153,27 +180,27 @@ namespace ProyectoFinalAP1.UI.Registros
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             int id;
-            RepositorioBase<Cobradores> repositorio = new RepositorioBase<Cobradores>();
+            ClientesRepositorio repositorio = new ClientesRepositorio();
 
             int.TryParse(Convert.ToString(ClienteIdnumericUpDown.Value), out id);
 
-            Limpiar();
-
-            if (repositorio.Eliminar(id))
+            if (repositorio.Buscar(id) != null)
             {
-                MessageBox.Show("¡Eliminado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                EliminarClientesVDForm EliminarVentanaDialogo = new EliminarClientesVDForm(id);
+                EliminarVentanaDialogo.ShowDialog();
+                Limpiar();
             }
             else
             {
-                MyerrorProvider.SetError(ClienteIdnumericUpDown, "No se puede eliminar un cliente que no existe");
+                MyerrorProvider.SetError(ClienteIdnumericUpDown, "No se puede eliminar o desactivar un cliente que no existe");
             }
         }
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             int id;
-            Clientes cliente = new Clientes();
-            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
+            Clientes cliente = new Clientes(); 
+            ClientesRepositorio repositorio = new ClientesRepositorio();
 
             int.TryParse(Convert.ToString(ClienteIdnumericUpDown.Value), out id);
 
@@ -183,7 +210,15 @@ namespace ProyectoFinalAP1.UI.Registros
 
             if (cliente != null)
             {
-                LlenaCampos(cliente);
+                if (cliente.Activo)
+                    LlenaCampos(cliente);
+                else
+                {
+                    DialogResult resultado = MessageBox.Show("El cliente se encuentra INACTIVO, ¿Desea buscarlo entre los clientes INACTIVOS?", "",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    
+                    if(resultado == DialogResult.Yes)
+                        LlenaCampos(cliente);
+                }
             }
             else
             {
@@ -193,9 +228,22 @@ namespace ProyectoFinalAP1.UI.Registros
         private void ActivocheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (ActivocheckBox.Checked)
+            {
+                ActivocheckBox.Text = "ACTIVO";
                 ActivocheckBox.ForeColor = Color.Green;
+            }
             else
+            {
+                ActivocheckBox.Text = "INACTIVO";
                 ActivocheckBox.ForeColor = Color.Red;
+            }
+        }
+
+        private void RClientesForm_Load(object sender, EventArgs e)
+        {
+            UsuarioIdnumericUpDown.Value = usuario.UsuarioId;
+            BalancetextBox.Text = "0.00";
+            ActivocheckBox.Checked = true;
         }
     }
 }

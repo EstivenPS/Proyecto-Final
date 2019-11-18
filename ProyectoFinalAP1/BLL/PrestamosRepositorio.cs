@@ -10,15 +10,17 @@ namespace ProyectoFinalAP1.BLL
 {
     public class PrestamosRepositorio : RepositorioBase<Prestamos>
     {
-        public override bool Modificar(Prestamos entity)
+        public override bool Modificar(Prestamos prestamo)
         {
+            bool paso = false;
+
             try
             {
-                var Anterior = _contexto.Prestamo.Find(entity.PrestamoId);
+                var Anterior = _contexto.Prestamo.Find(prestamo.PrestamoId);
                 foreach (var item in Anterior.Cuotas)
                 {
-                    if (!entity.Cuotas.Exists(d => d.PrestamoId == item.PrestamoId))
-                        _contexto.Entry(entity).State = EntityState.Deleted;
+                    if (!prestamo.Cuotas.Exists(d => d.PrestamoId == item.PrestamoId))
+                        _contexto.Entry(item).State = EntityState.Deleted;
                 }
             }
             catch(Exception)
@@ -26,21 +28,28 @@ namespace ProyectoFinalAP1.BLL
                 throw;
             }
 
-            bool paso = base.Modificar(entity);
+            paso = base.Modificar(prestamo);
 
             return paso;
         }
 
         public override Prestamos Buscar(int id)
         {
-            Prestamos prestamos = new Prestamos();
-            
-            prestamos = base.Buscar(id);
+            Prestamos prestamo = new Prestamos();
 
-            if (prestamos != null)
-                prestamos.Cuotas.Count();//Para que se ejecute el Lazyloading cuando se encuentre un registro de un prestamo
+            try
+            {
+                prestamo = base.Buscar(id);
 
-            return prestamos;
+                if (prestamo != null)
+                    prestamo.Cuotas.Count();//Para que se ejecute el Lazyloading cuando se encuentre un registro de un prestamo
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+
+            return prestamo;
         }
     }
 }

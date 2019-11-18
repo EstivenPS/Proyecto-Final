@@ -117,41 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="MyerrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>41</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="CalcularCuotasbutton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAAEzSURBVDhPfdJNK4RRGIfxkRqs
-        2NnJylvEZ7BVko0FNTbeyneQL2NhY6OUUmZHslGihIy8NGVlxXi7rukc3fMsZvFrOvf/vs/zPGdOafq4
-        EXVgFju4whOusYt5dOK/Pw4O4hC/bVQxhJbhAdwgNv7gO/3Geg3NDRwswx1jg7YwiTl8plp2hrLDfksM
-        skWY+zkfqRZVDPcKxWwV5mOhFh0Z3qfFF7axjg2MwLwPbmRtE6+wv2b4lhZ+Vz+stXMJ++suHtKigRkM
-        w6f2wtwD9XStj+MO9j8a7qdFfrqHowrMHXpPNeW/rmq4kBZFyzD3qZ5HMV/Lr3UaitkKzCZQ/Ksu0O1w
-        fjXvcWx4hvfbb4y3rA4vT8vdHsUJ4gZF55hCcyYOqwtL8BC96y+4xQE8gx6k3kbpDxsSR9bwYEh3AAAA
-        AElFTkSuQmCC
-</value>
-  </data>
-  <data name="Buscarbutton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        egAAAHoBlQypfwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIWSURBVDhPY/j/
-        /z9eHB4e7RkdGz8lJiH1RHRc4oKsrKz0Dx8+KMHkMTTAcHR0NF9MfOKm2MSMb0W9K//VzDv8v3TCuv8p
-        WcXfExJTr0ybNtsCqI4dq2YQBtq2OrO880fv/m//Jxz9D8aTjv3/v+Tcn/+FbXP/JCSmPF+0aCc3Vs0R
-        ETEOsQlp33r2fYFrBuHZp///X3D2//9Zp/78T8ku/hkVFd2M1QCQREHr/J/ImkF48fn//6efhNCVk9b/
-        j4lLOo3VgJj4pC2V03eiaJ52Auj8Cwi6btGp/0BvvsFqQGRkdE9B+4JfyAbMBzp9DtALMLps4sb/sXFJ
-        57AaEBUV5RKbmP6td/9XsGZQ4C2D2g6iJx/79z85q+RHVFRMN1YDQDg6Jv5IRkXHT1AszDr1///Cc6DA
-        AwXin/95zbP/xsQmPE9LS+PC0FjRHiXYvTAqJzIy6nN0dNyDuKSMH5W9i/81zN33v2bC8v/JmYU/gH5/
-        BHSlMUg9iubQ0FAhoMZzjRMiT1S2RM8CiSUnp+anZ2Qdj4tPuZeemXM8Nja2sqGhgQ2mB0MzMAD/A/32
-        qbQ22hoqJ4+E5aBicIxFc/THyMhIG6gCJiA2AGJeIDYEYm4gRjUAXXNYGNxmEGYFYmkgFgFiLagYCmZY
-        sCdiYkJy1FugASCbLbEpAmKQIaJoYmDMsOxEpHjP/KgdwNwHyl0YCvDj/wwAKl+0ERLvoCoAAAAASUVO
-        RK5CYII=
-</value>
-  </data>
   <data name="Eliminarbutton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -182,34 +148,23 @@
         ysD07wmDq38O6f77fUD3PyH8brv1/wsLY8Caj8zMsgEA2QEKxzZROl0AAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="NumeroCuota.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Fecha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Capital.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Interes.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Balance.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="NumeroCuota.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Fecha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Capital.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Interes.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Balance.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <data name="Buscarbutton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        egAAAHoBlQypfwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIWSURBVDhPY/j/
+        /z9eHB4e7RkdGz8lJiH1RHRc4oKsrKz0Dx8+KMHkMTTAcHR0NF9MfOKm2MSMb0W9K//VzDv8v3TCuv8p
+        WcXfExJTr0ybNtsCqI4dq2YQBtq2OrO880fv/m//Jxz9D8aTjv3/v+Tcn/+FbXP/JCSmPF+0aCc3Vs0R
+        ETEOsQlp33r2fYFrBuHZp///X3D2//9Zp/78T8ku/hkVFd2M1QCQREHr/J/ImkF48fn//6efhNCVk9b/
+        j4lLOo3VgJj4pC2V03eiaJ52Auj8Cwi6btGp/0BvvsFqQGRkdE9B+4JfyAbMBzp9DtALMLps4sb/sXFJ
+        57AaEBUV5RKbmP6td/9XsGZQ4C2D2g6iJx/79z85q+RHVFRMN1YDQDg6Jv5IRkXHT1AszDr1///Cc6DA
+        AwXin/95zbP/xsQmPE9LS+PC0FjRHiXYvTAqJzIy6nN0dNyDuKSMH5W9i/81zN33v2bC8v/JmYU/gH5/
+        BHSlMUg9iubQ0FAhoMZzjRMiT1S2RM8CiSUnp+anZ2Qdj4tPuZeemXM8Nja2sqGhgQ2mB0MzMAD/A/32
+        qbQ22hoqJ4+E5aBicIxFc/THyMhIG6gCJiA2AGJeIDYEYm4gRjUAXXNYGNxmEGYFYmkgFgFiLagYCmZY
+        sCdiYkJy1FugASCbLbEpAmKQIaJoYmDMsOxEpHjP/KgdwNwHyl0YCvDj/wwAKl+0ERLvoCoAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <metadata name="MyerrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
 </root>

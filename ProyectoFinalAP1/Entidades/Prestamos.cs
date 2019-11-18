@@ -12,25 +12,27 @@ namespace ProyectoFinalAP1.Entidades
         [Key]
         public int PrestamoId { get; set; }
         public int ClienteId { get; set; }
+        public int UsuarioId { get; set; }
         public int CobradorId { get; set; }
         public DateTime Fecha { get; set; }
         public decimal MontoPrestamo { get; set; }
-        public decimal Mora { get; set; }
         public decimal Interes { get; set; }
         public decimal Balance { get; set; }
-        public virtual List<CuotasDetalle> Cuotas { get; set; }
+        public int CantidadCuotas { get; set; }
+        public virtual List<PrestamosDetalle> Cuotas { get; set; }
 
         public Prestamos()
         {
             PrestamoId = 0;
             ClienteId = 0;
+            UsuarioId = 0;
             CobradorId = 0;
             Fecha = DateTime.Now;
             MontoPrestamo = 0;
-            Mora = 0;
             Interes = 0;
             Balance = 0;
-            Cuotas = new List<CuotasDetalle>();
+            CantidadCuotas = 0;
+            Cuotas = new List<PrestamosDetalle>();
         }
     }
 }

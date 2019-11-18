@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinalAP1.Entidades
 {
-    public class CuotasDetalle
+    public class PrestamosDetalle
     {
         [Key]
         public int CuotaId { get; set; }
@@ -16,10 +16,9 @@ namespace ProyectoFinalAP1.Entidades
         public int NumeroCuota { get; set; }
         public decimal Capital { get; set; }
         public decimal Interes { get; set; }
-        public decimal Total { get; set; }
         public decimal Balance { get; set; }
 
-        public CuotasDetalle()
+        public PrestamosDetalle()
         {
             CuotaId = 0;
             PrestamoId = 0;
@@ -27,8 +26,18 @@ namespace ProyectoFinalAP1.Entidades
             NumeroCuota = 0;
             Capital = 0;
             Interes = 0;
-            Total = 0;
             Balance = 0;
+        }
+
+        public PrestamosDetalle(int cuotaId, int prestamoId, DateTime fecha, int numerocuota, decimal capital, decimal interes, decimal balance)
+        {
+            CuotaId = cuotaId;
+            PrestamoId = prestamoId;
+            Fecha = fecha;
+            NumeroCuota = numerocuota;
+            Capital = capital;
+            Interes = interes;
+            Balance = balance;
         }
     }
 }

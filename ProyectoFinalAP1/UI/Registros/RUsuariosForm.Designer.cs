@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RUsuariosForm));
             this.DatosPersonalesgroupBox = new System.Windows.Forms.GroupBox();
+            this.EmailtextBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.CedulamaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.ApellidostextBox = new System.Windows.Forms.TextBox();
             this.NombrestextBox = new System.Windows.Forms.TextBox();
@@ -63,6 +65,8 @@
             // 
             // DatosPersonalesgroupBox
             // 
+            this.DatosPersonalesgroupBox.Controls.Add(this.EmailtextBox);
+            this.DatosPersonalesgroupBox.Controls.Add(this.label10);
             this.DatosPersonalesgroupBox.Controls.Add(this.CedulamaskedTextBox);
             this.DatosPersonalesgroupBox.Controls.Add(this.ApellidostextBox);
             this.DatosPersonalesgroupBox.Controls.Add(this.NombrestextBox);
@@ -71,10 +75,26 @@
             this.DatosPersonalesgroupBox.Controls.Add(this.label3);
             this.DatosPersonalesgroupBox.Location = new System.Drawing.Point(12, 38);
             this.DatosPersonalesgroupBox.Name = "DatosPersonalesgroupBox";
-            this.DatosPersonalesgroupBox.Size = new System.Drawing.Size(449, 102);
+            this.DatosPersonalesgroupBox.Size = new System.Drawing.Size(449, 126);
             this.DatosPersonalesgroupBox.TabIndex = 0;
             this.DatosPersonalesgroupBox.TabStop = false;
             this.DatosPersonalesgroupBox.Text = "Datos personales";
+            // 
+            // EmailtextBox
+            // 
+            this.EmailtextBox.Location = new System.Drawing.Point(108, 97);
+            this.EmailtextBox.Name = "EmailtextBox";
+            this.EmailtextBox.Size = new System.Drawing.Size(335, 20);
+            this.EmailtextBox.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 100);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Email:";
             // 
             // CedulamaskedTextBox
             // 
@@ -130,13 +150,13 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(18, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 13);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Id:";
+            this.label1.Text = "Usuario Id:";
             // 
             // UsuarioIdnumericUpDown
             // 
-            this.UsuarioIdnumericUpDown.Location = new System.Drawing.Point(43, 13);
+            this.UsuarioIdnumericUpDown.Location = new System.Drawing.Point(120, 12);
             this.UsuarioIdnumericUpDown.Name = "UsuarioIdnumericUpDown";
             this.UsuarioIdnumericUpDown.Size = new System.Drawing.Size(101, 20);
             this.UsuarioIdnumericUpDown.TabIndex = 2;
@@ -169,7 +189,7 @@
             this.DatosUsuariogroupBox.Controls.Add(this.label7);
             this.DatosUsuariogroupBox.Controls.Add(this.NombreUsuariotextBox);
             this.DatosUsuariogroupBox.Controls.Add(this.label6);
-            this.DatosUsuariogroupBox.Location = new System.Drawing.Point(12, 146);
+            this.DatosUsuariogroupBox.Location = new System.Drawing.Point(12, 170);
             this.DatosUsuariogroupBox.Name = "DatosUsuariogroupBox";
             this.DatosUsuariogroupBox.Size = new System.Drawing.Size(449, 130);
             this.DatosUsuariogroupBox.TabIndex = 5;
@@ -180,7 +200,7 @@
             // 
             this.ActivocheckBox.AutoSize = true;
             this.ActivocheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActivocheckBox.ForeColor = System.Drawing.Color.Red;
+            this.ActivocheckBox.ForeColor = System.Drawing.Color.Green;
             this.ActivocheckBox.Location = new System.Drawing.Point(108, 99);
             this.ActivocheckBox.Name = "ActivocheckBox";
             this.ActivocheckBox.Size = new System.Drawing.Size(82, 20);
@@ -202,8 +222,8 @@
             // 
             this.TipoUsuariocomboBox.FormattingEnabled = true;
             this.TipoUsuariocomboBox.Items.AddRange(new object[] {
-            "Administrador",
-            "Secretaria"});
+            "Administrador/a",
+            "Secretario/a"});
             this.TipoUsuariocomboBox.Location = new System.Drawing.Point(108, 71);
             this.TipoUsuariocomboBox.Name = "TipoUsuariocomboBox";
             this.TipoUsuariocomboBox.Size = new System.Drawing.Size(119, 21);
@@ -254,7 +274,7 @@
             // 
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(21, 284);
+            this.Nuevobutton.Location = new System.Drawing.Point(21, 319);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(80, 39);
             this.Nuevobutton.TabIndex = 6;
@@ -267,7 +287,7 @@
             // 
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(200, 284);
+            this.Guardarbutton.Location = new System.Drawing.Point(200, 319);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(80, 39);
             this.Guardarbutton.TabIndex = 7;
@@ -280,7 +300,7 @@
             // 
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(375, 284);
+            this.Eliminarbutton.Location = new System.Drawing.Point(375, 319);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(80, 39);
             this.Eliminarbutton.TabIndex = 8;
@@ -293,7 +313,7 @@
             // 
             this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Buscarbutton.Location = new System.Drawing.Point(150, 5);
+            this.Buscarbutton.Location = new System.Drawing.Point(227, 6);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(64, 32);
             this.Buscarbutton.TabIndex = 9;
@@ -310,7 +330,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 333);
+            this.ClientSize = new System.Drawing.Size(474, 368);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
@@ -323,6 +343,7 @@
             this.Controls.Add(this.DatosPersonalesgroupBox);
             this.Name = "RUsuariosForm";
             this.Text = "Registro de Usuarios";
+            this.Load += new System.EventHandler(this.RUsuariosForm_Load);
             this.DatosPersonalesgroupBox.ResumeLayout(false);
             this.DatosPersonalesgroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioIdnumericUpDown)).EndInit();
@@ -361,5 +382,7 @@
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.ErrorProvider MyerrorProvider;
+        private System.Windows.Forms.TextBox EmailtextBox;
+        private System.Windows.Forms.Label label10;
     }
 }

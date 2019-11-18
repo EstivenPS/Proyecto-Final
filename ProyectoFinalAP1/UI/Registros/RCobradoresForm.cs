@@ -14,21 +14,26 @@ namespace ProyectoFinalAP1.UI.Registros
 {
     public partial class RCobradoresForm : Form
     {
-        public RCobradoresForm()
+        private Usuarios usuario { get; set; }
+
+        public RCobradoresForm(Usuarios usuario)
         {
+            this.usuario = usuario;
             InitializeComponent();
         }
 
         private void Limpiar()
         {
             CobradorIdnumericUpDown.Value = 0;
+            UsuarioIdnumericUpDown.Value = 0;
             FechadateTimePicker.Value = DateTime.Now;
             NombrestextBox.Text = string.Empty;
             ApellidostextBox.Text = string.Empty;
             DirecciontextBox.Text = string.Empty;
             CedulamaskedTextBox.Text = string.Empty;
             TelefonomaskedTextBox.Text = string.Empty;
-            ActivocheckBox.Checked = false;
+            EmailtextBox.Text = string.Empty;
+            ActivocheckBox.Checked = true;
             MyerrorProvider.Clear();
         }
 
@@ -37,12 +42,14 @@ namespace ProyectoFinalAP1.UI.Registros
             Cobradores cobrador = new Cobradores();
 
             cobrador.CobradorId = (int)CobradorIdnumericUpDown.Value;
+            cobrador.UsuarioId = (int)UsuarioIdnumericUpDown.Value;
             cobrador.Fecha = FechadateTimePicker.Value;
             cobrador.Nombres = NombrestextBox.Text;
             cobrador.Apellidos = ApellidostextBox.Text;
             cobrador.Direccion = DirecciontextBox.Text;
             cobrador.Cedula = CedulamaskedTextBox.Text;
             cobrador.Telefono = TelefonomaskedTextBox.Text;
+            cobrador.Email = EmailtextBox.Text;
             cobrador.Activo = ActivocheckBox.Checked;
 
             return cobrador;
@@ -51,25 +58,28 @@ namespace ProyectoFinalAP1.UI.Registros
         private void LlenaCampos(Cobradores cobrador)
         {
             CobradorIdnumericUpDown.Value = cobrador.CobradorId;
+            UsuarioIdnumericUpDown.Value = cobrador.UsuarioId;
             FechadateTimePicker.Value = cobrador.Fecha;
             NombrestextBox.Text = cobrador.Nombres;
             ApellidostextBox.Text = cobrador.Apellidos;
             DirecciontextBox.Text = cobrador.Direccion;
             CedulamaskedTextBox.Text = cobrador.Cedula;
             TelefonomaskedTextBox.Text = cobrador.Telefono;
+            EmailtextBox.Text = cobrador.Email;
             ActivocheckBox.Checked = cobrador.Activo;
         }
 
         private bool ExisteEnLaBaseDeDatos()
         {
-            RepositorioBase<Cobradores> repositorio = new RepositorioBase<Cobradores>();
+            CobradoresRepositorio repositorio = new CobradoresRepositorio();
             Cobradores cobrador = repositorio.Buscar((int)CobradorIdnumericUpDown.Value);
-            return cobrador != null;
+            return (cobrador != null);
         }
 
         private bool Validar()
         {
             bool paso = true;
+            MyerrorProvider.Clear();
 
             if (string.IsNullOrWhiteSpace(NombrestextBox.Text))
             {
@@ -87,22 +97,29 @@ namespace ProyectoFinalAP1.UI.Registros
 
             if (string.IsNullOrWhiteSpace(DirecciontextBox.Text))
             {
-                MyerrorProvider.SetError(DirecciontextBox, "El campo Direccion no puede estar vacio");
+                MyerrorProvider.SetError(DirecciontextBox, "El campo Dirección no puede estar vacio");
                 DirecciontextBox.Focus();
                 paso = false;
             }
 
-            if (string.IsNullOrWhiteSpace(CedulamaskedTextBox.Text.Replace(' ', '-')))
+            if (string.IsNullOrWhiteSpace(CedulamaskedTextBox.Text.Replace("-", "")))
             {
-                MyerrorProvider.SetError(CedulamaskedTextBox, "El campo Cedula no puede estar vacio");
+                MyerrorProvider.SetError(CedulamaskedTextBox, "El campo Cédula no puede estar vacio");
                 CedulamaskedTextBox.Focus();
                 paso = false;
             }
 
-            if (string.IsNullOrWhiteSpace(TelefonomaskedTextBox.Text))
+            if (string.IsNullOrWhiteSpace(TelefonomaskedTextBox.Text.Replace("-", "")))
             {
-                MyerrorProvider.SetError(TelefonomaskedTextBox, "El campo Telefono no puede estar vacio");
+                MyerrorProvider.SetError(TelefonomaskedTextBox, "El campo Teléfono no puede estar vacio");
                 TelefonomaskedTextBox.Focus();
+                paso = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(EmailtextBox.Text))
+            {
+                MyerrorProvider.SetError(EmailtextBox, "El campo Email no puede estar vacio");
+                EmailtextBox.Focus();
                 paso = false;
             }
 
@@ -118,7 +135,7 @@ namespace ProyectoFinalAP1.UI.Registros
         {
             bool paso = false;
             Cobradores cobrador;
-            RepositorioBase<Cobradores> repositorio = new RepositorioBase<Cobradores>();
+            CobradoresRepositorio repositorio = new CobradoresRepositorio();
 
             if (!Validar())
                 return;
@@ -131,7 +148,7 @@ namespace ProyectoFinalAP1.UI.Registros
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
-                    MessageBox.Show("No se puede modificar un registro que no existe","Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se puede modificar un cobrador que no existe","Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -152,19 +169,19 @@ namespace ProyectoFinalAP1.UI.Registros
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             int id;
-            RepositorioBase<Cobradores> repositorio = new RepositorioBase<Cobradores>();
+            CobradoresRepositorio repositorio = new CobradoresRepositorio();
 
             int.TryParse(Convert.ToString(CobradorIdnumericUpDown.Value), out id);
 
-            Limpiar();
-
-            if (repositorio.Eliminar(id))
+            if (repositorio.Buscar(id) != null)
             {
-                MessageBox.Show("¡Eliminado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                EliminarCobradoresVDForm EliminarVentanaDialogo = new EliminarCobradoresVDForm(id);
+                EliminarVentanaDialogo.ShowDialog();
+                Limpiar();
             }
             else
             {
-                MyerrorProvider.SetError(CobradorIdnumericUpDown, "No se puede eliminar un cobrador que no existe");
+                MyerrorProvider.SetError(CobradorIdnumericUpDown, "No se puede eliminar o desactivar un cobrador que no existe");
             }
         }
 
@@ -172,7 +189,7 @@ namespace ProyectoFinalAP1.UI.Registros
         {
             int id;
             Cobradores cobrador = new Cobradores();
-            RepositorioBase<Cobradores> repositorio = new RepositorioBase<Cobradores>();
+            CobradoresRepositorio repositorio = new CobradoresRepositorio();
 
             int.TryParse(Convert.ToString(CobradorIdnumericUpDown.Value), out id);
 
@@ -182,7 +199,15 @@ namespace ProyectoFinalAP1.UI.Registros
 
             if (cobrador != null)
             {
-                LlenaCampos(cobrador);
+                if (cobrador.Activo)
+                    LlenaCampos(cobrador);
+                else
+                {
+                    DialogResult resultado = MessageBox.Show("El cobrador se encuentra INACTIVO, ¿Desea buscarlo entre los cobradores INACTIVOS?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (resultado == DialogResult.Yes)
+                        LlenaCampos(cobrador);
+                }
             }
             else
             {
@@ -193,9 +218,21 @@ namespace ProyectoFinalAP1.UI.Registros
         private void ActivocheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (ActivocheckBox.Checked)
+            {
+                ActivocheckBox.Text = "ACTIVO";
                 ActivocheckBox.ForeColor = Color.Green;
+            }
             else
+            {
+                ActivocheckBox.Text = "INACTIVO";
                 ActivocheckBox.ForeColor = Color.Red;
+            }
+        }
+
+        private void RCobradoresForm_Load(object sender, EventArgs e)
+        {
+            UsuarioIdnumericUpDown.Value = usuario.UsuarioId;
+            ActivocheckBox.Checked = true;
         }
     }
 }

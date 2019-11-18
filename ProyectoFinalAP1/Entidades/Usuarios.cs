@@ -11,11 +11,11 @@ namespace ProyectoFinalAP1.Entidades
     {
         [Key]
         public int UsuarioId { get; set; }
-        public int EmpresaId { get; set; }
         public DateTime Fecha { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public string Cedula { get; set; }
+        public string Email { get; set; }
         public int TipoUsuario { get; set; }
         public string NombreUsuario { get; set; }
         public string ClaveUsuario { get; set; }
@@ -24,11 +24,11 @@ namespace ProyectoFinalAP1.Entidades
         public Usuarios()
         {
             UsuarioId = 0;
-            EmpresaId = 1;
             Fecha = DateTime.Now;
             Nombres = string.Empty;
             Apellidos = string.Empty;
             Cedula = string.Empty;
+            Email = string.Empty;   
             TipoUsuario = 0;
             NombreUsuario = string.Empty;
             ClaveUsuario = string.Empty;
