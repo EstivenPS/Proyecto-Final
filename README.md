@@ -9,7 +9,7 @@ _EPS Prestamos es un sistema de prestamos de dinero en efectivo, el cual tiene c
 
 ![imagen](https://user-images.githubusercontent.com/54590857/69562663-04df5180-0f86-11ea-979c-3bf812692ec8.png)
 
-_Esta es la primera ventana que se muestra al ejecutar el programa, se trata de un Login en el cual el usuario deberá loguearse para poder acceder al sistema. Si es la primera vez que se ejecuta el programa, existe un usuario creado por defecto con accesos de "Administrador/a", cuyo nombre de **Usuario** y **Contraseña** son: **admin** y **admin** respectivamente._ 
+_Esta es la primera ventana que se muestra al ejecutar el programa, se trata de un Login en el cual el usuario deberá loguearse para poder acceder al sistema. Si es la primera vez que se ejecuta el programa, existe un usuario creado por defecto con accesos de "Administrador/a", cuyo **Nombre de Usuario** y **Contraseña** son: **admin** y **admin** respectivamente._ 
 
 
 ## ⚙️ Menú 
@@ -43,7 +43,7 @@ _En este registro se guardan los prestamos. El cliente y el cobrador se debe ele
 
 ![imagen](https://user-images.githubusercontent.com/54590857/69573437-76c29580-0f9c-11ea-8480-b4e08c48d725.png)
 
-_Aquí se registran los cobros que se le realizaran a las cuotas de un prestamo en particular. Para ello se debe llenar en el siguiente orden: primero se debe elegir el cliente al que se le va a realizar el cobro, después se debe elegir de entre los prestamos perteneciente al cliente aquel al que se le va a realizar el cobro, luego de esto se debe elegir el número de la cuota y automáticamente se va a habilitar el campo de "Monto", el cual sólo admite montos menores o iguales al balance de la cuota elegida previamente. También se tiene un botón con el cual se puede imprimir un recibo con algunos datos del cobro._
+_Aquí se registran los cobros que se le realizaran a las cuotas de un prestamo en particular. Para ello se debe llenar en el siguiente orden: primero se debe elegir el cliente al que se le va a realizar el cobro, después se habilitará el campo "Prestamo Id" para elegir de entre los prestamos perteneciente al cliente, aquel al que se le va a realizar el cobro, luego de esto se habilitará el campo "Número de cuota" para que elija el número de la cuota y automáticamente se va a habilitar el campo de "Monto", el cual sólo admite montos menores o iguales al balance de la cuota elegida previamente. También se tiene un botón con el cual se puede imprimir un recibo con algunos datos del cobro._
 
 ### Registro de usuarios 
 
@@ -76,11 +76,11 @@ _Debe contar con una computadora que tenga como mínimo las siguientes especific
 * Photoshop CC (Para el logo de la empresa).
 * Mozilla Firefox.
 
-## ✒️ Autores 
+## ✒️ Autor 
 
 **Estiven de Jesus Padilla Santos (2017-0596).** 
 
-## Expresiones de Gratitud 🎁
+## 🎁 Expresiones de Gratitud 
 
 * Gracias al profesor Enel por enseñarme todos los conocimientos requeridos para poder darle vida a este software 📢.
 * Gracias a mis amigos por ayudar en mis momento de duda 🤓. 
