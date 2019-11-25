@@ -9,7 +9,7 @@ _EPS Prestamos es un sistema de prestamos de dinero en efectivo, el cual tiene c
 
 ![imagen](https://user-images.githubusercontent.com/54590857/69562663-04df5180-0f86-11ea-979c-3bf812692ec8.png)
 
-_Esta es la primera ventana que se muestra al ejecutar el programa, se trata de un Login en el cual el usuario deberá loguearse para poder acceder al sistema. Si es la primera vez que se ejecuta el programa, existe un usuario creado por defecto con accesos de "Administrador/a", cuyo nombre de **Usuario** y **Contraseña** son: **admin** y **admin** respectivamente._ 
+_Esta es la primera ventana que se muestra al ejecutar el programa, se trata de un Login en el cual el usuario deberá loguearse para poder acceder al sistema. Si es la primera vez que se ejecuta el programa, existe un usuario creado por defecto con accesos de "Administrador/a", cuyo **Nombre de Usuario** y **Contraseña** son: **admin** y **admin** respectivamente._ 
 
 
 ## ⚙️ Menú 
