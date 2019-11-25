@@ -22,15 +22,18 @@ namespace ProyectoFinalAP1.BLL.Tests
         public void GuardarTest()
         {
             bool paso = false;
-            Empresas empresa = new Empresas();
-            RepositorioBase<Empresas> repositorio = new RepositorioBase<Empresas>();
+            PrestamosDetalles cuota = new PrestamosDetalles();
+            RepositorioBase<PrestamosDetalles> repositorio = new RepositorioBase<PrestamosDetalles>();
 
-            empresa.EmpresaId = 0;
-            empresa.Nombre = "Prueba";
-            empresa.Direccion = "Prueba";
-            empresa.Telefono = "000-000-0000";
+            cuota.CuotaId = 0;
+            cuota.PrestamoId = 1;
+            cuota.Fecha = DateTime.Now;
+            cuota.NumeroCuota = 1;
+            cuota.Capital = 25;
+            cuota.Interes = 2;
+            cuota.Balance = 27;
 
-            paso = repositorio.Guardar(empresa);
+            paso = repositorio.Guardar(cuota);
             Assert.AreEqual(paso, true);
         }
 
@@ -38,15 +41,18 @@ namespace ProyectoFinalAP1.BLL.Tests
         public void ModificarTest()
         {
             bool paso = false;
-            Empresas empresa = new Empresas();
-            RepositorioBase<Empresas> repositorio = new RepositorioBase<Empresas>();
+            PrestamosDetalles cuota = new PrestamosDetalles();
+            RepositorioBase<PrestamosDetalles> repositorio = new RepositorioBase<PrestamosDetalles>();
 
-            empresa.EmpresaId = 0;
-            empresa.Nombre = "PruebaModificado";
-            empresa.Direccion = "PruebaModificado";
-            empresa.Telefono = "000-000-0000";
+            cuota.CuotaId = 1;
+            cuota.PrestamoId = 1;
+            cuota.Fecha = DateTime.Now;
+            cuota.NumeroCuota = 2;
+            cuota.Capital = 25;
+            cuota.Interes = 2;
+            cuota.Balance = 27;
 
-            paso = repositorio.Modificar(empresa);
+            paso = repositorio.Modificar(cuota);
             Assert.AreEqual(paso, true);
         }
 
@@ -54,7 +60,7 @@ namespace ProyectoFinalAP1.BLL.Tests
         public void EliminarTest()
         {
             bool paso = false;
-            RepositorioBase<Empresas> repositorio = new RepositorioBase<Empresas>();
+            RepositorioBase<PrestamosDetalles> repositorio = new RepositorioBase<PrestamosDetalles>();
 
             paso = repositorio.Eliminar(1);
             Assert.AreEqual(paso, true);
@@ -63,11 +69,11 @@ namespace ProyectoFinalAP1.BLL.Tests
         [TestMethod()]
         public void BuscarTest()
         {
-            Empresas empresa = new Empresas();
-            RepositorioBase<Empresas> repositorio = new RepositorioBase<Empresas>();
+            PrestamosDetalles cuota = new PrestamosDetalles();
+            RepositorioBase<PrestamosDetalles> repositorio = new RepositorioBase<PrestamosDetalles>();
 
-            empresa = repositorio.Buscar(1);
-            Assert.IsTrue(empresa != null);
+            cuota = repositorio.Buscar(1);
+            Assert.IsTrue(cuota != null);
         }
 
         [TestMethod()]

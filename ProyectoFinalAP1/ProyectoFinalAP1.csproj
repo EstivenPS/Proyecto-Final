@@ -133,6 +133,12 @@
     <Compile Include="UI\Reportes\PrestamosReportViewer.Designer.cs">
       <DependentUpon>PrestamosReportViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Reportes\ReciboCobrosReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\ReciboCobrosReportViewer.Designer.cs">
+      <DependentUpon>ReciboCobrosReportViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Reportes\ReporteClientesCrystalReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -211,6 +217,12 @@
       <DependentUpon>ReportePrestamosCrystalReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\Reportes\ReporteReciboCobroCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteReciboCobroCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\Reportes\ReportesCobradoresCrystalReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -265,6 +277,9 @@
     <EmbeddedResource Include="UI\Reportes\PrestamosReportViewer.resx">
       <DependentUpon>PrestamosReportViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\ReciboCobrosReportViewer.resx">
+      <DependentUpon>ReciboCobrosReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\ReporteClientesCrystalReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteClientesCrystalReport.cs</LastGenOutput>
@@ -306,6 +321,10 @@
     <EmbeddedResource Include="UI\Reportes\ReportePrestamosCrystalReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReportePrestamosCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\ReporteReciboCobroCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteReciboCobroCrystalReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\ReportesCobradoresCrystalReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

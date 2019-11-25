@@ -1,5 +1,6 @@
 ﻿using ProyectoFinalAP1.BLL;
 using ProyectoFinalAP1.Entidades;
+using ProyectoFinalAP1.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,8 @@ namespace ProyectoFinalAP1.UI.Registros
             BalanceCuotalabel.Text = "0.00";
             BalancePrestamolabel.Text = "0.00";
             MontonumericUpDown.Value = 0;
+            PrestamoIdcomboBox.Enabled = false;
+            NumeroCuotacomboBox.Enabled = false;
             MontonumericUpDown.Enabled = false;
             MyerrorProvider.Clear();
         }
@@ -211,6 +214,8 @@ namespace ProyectoFinalAP1.UI.Registros
 
             Usuariolabel.Text = usuario.NombreUsuario;
             ClientecomboBox.Text = "Seleccione un cliente";
+            PrestamoIdcomboBox.Enabled = false;
+            NumeroCuotacomboBox.Enabled = false;
             MontonumericUpDown.Enabled = false;
         }
 
@@ -228,11 +233,12 @@ namespace ProyectoFinalAP1.UI.Registros
             PrestamoIdcomboBox.DisplayMember = "PrestamoId";
             PrestamoIdcomboBox.ValueMember = "PrestamoId";
             PrestamoIdcomboBox.Text = string.Empty;
+            PrestamoIdcomboBox.Enabled = true;
         }
 
         private void PrestamoIdcomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ClientecomboBox.Text != "Seleccione un cliente" && PrestamoIdcomboBox.SelectedIndex != 0)
+            if (ClientecomboBox.Text != "Seleccione un cliente" && PrestamoIdcomboBox.Enabled)
             {
                 RepositorioBase<PrestamosDetalles> repositorio = new RepositorioBase<PrestamosDetalles>();
                 PrestamosRepositorio repositorioPrestamos = new PrestamosRepositorio();
@@ -256,12 +262,14 @@ namespace ProyectoFinalAP1.UI.Registros
                 NumeroCuotacomboBox.DisplayMember = "NumeroCuota";
                 NumeroCuotacomboBox.ValueMember = "CuotaId";
                 NumeroCuotacomboBox.Text = string.Empty;
+                NumeroCuotacomboBox.Enabled = true;
             }
         }
         
         private void NumeroCuotacomboBox_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (ClientecomboBox.Text != "Seleccione un cliente" && PrestamoIdcomboBox.SelectedIndex != 0 && NumeroCuotacomboBox.SelectedIndex != 0)
+            //if (ClientecomboBox.Text != "Seleccione un cliente" && PrestamoIdcomboBox.SelectedIndex != 0 && NumeroCuotacomboBox.SelectedIndex != 0)
+            if (ClientecomboBox.Text != "Seleccione un cliente" && PrestamoIdcomboBox.Enabled && NumeroCuotacomboBox.Enabled)
             {
                 RepositorioBase<PrestamosDetalles> repositorio = new RepositorioBase<PrestamosDetalles>();
                 List<PrestamosDetalles> ListaCuotas = new List<PrestamosDetalles>();
@@ -294,6 +302,25 @@ namespace ProyectoFinalAP1.UI.Registros
             if (MontonumericUpDown.Value > Convert.ToDecimal(BalanceCuotalabel.Text) && MontonumericUpDown.Enabled == true)
             {
                 MyerrorProvider.SetError(MontonumericUpDown, "El monto del cobro no puede ser mayor que el balance de la cuota seleccionada");
+            }
+        }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            if (CobroIdnumericUpDown.Value != 0)
+            {
+                CobrosRepositorio repositorio = new CobrosRepositorio();
+                List<Cobros> cobros = new List<Cobros>();
+
+                cobros = repositorio.GetList(c => true).Where(c => c.CobroId == CobroIdnumericUpDown.Value).ToList();
+
+                ReciboCobrosReportViewer reciboReportViewer = new ReciboCobrosReportViewer(cobros);
+                reciboReportViewer.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Para poder imprimir un recibo, primero debe buscar un registro");
+                return;
             }
         }
     }

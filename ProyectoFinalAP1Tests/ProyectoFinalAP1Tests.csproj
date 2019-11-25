@@ -64,7 +64,12 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="BLL\ClientesRepositorioTests.cs" />
+    <Compile Include="BLL\CobradoresRepositorioTests.cs" />
+    <Compile Include="BLL\CobrosRepositorioTests.cs" />
+    <Compile Include="BLL\PrestamosRepositorioTests.cs" />
     <Compile Include="BLL\RepositorioBaseTests.cs" />
+    <Compile Include="BLL\UsuariosRepositorioTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
