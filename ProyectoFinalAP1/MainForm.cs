@@ -30,9 +30,16 @@ namespace ProyectoFinalAP1
         
         private void registroDeCobradoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rCobradores rcob = new rCobradores(usuario);
-            rcob.MdiParent = this;
-            rcob.Show();
+            if (usuario.TipoUsuario == 0 || usuario.TipoUsuario == 1)
+            {
+                rCobradores rcob = new rCobradores(usuario);
+                rcob.MdiParent = this;
+                rcob.Show();
+            }
+            else
+            {
+                MessageBox.Show("Lo sentimos, no tienes permisos para acceder a este módulo", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void registroDePrestamosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,9 +58,16 @@ namespace ProyectoFinalAP1
 
         private void registroDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rClientes rcli = new rClientes(usuario);
-            rcli.MdiParent = this;
-            rcli.Show();
+            if (usuario.TipoUsuario == 0 || usuario.TipoUsuario == 1)
+            {
+                rClientes rcli = new rClientes(usuario);
+                rcli.MdiParent = this;
+                rcli.Show();
+            }
+            else
+            {
+                MessageBox.Show("Lo sentimos, no tienes permisos para acceder a este módulo", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void consultaDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,9 +79,16 @@ namespace ProyectoFinalAP1
 
         private void consultaDeCobradoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cCobradores ccr = new cCobradores();
-            ccr.MdiParent = this;
-            ccr.Show();
+            if (usuario.TipoUsuario == 0 || usuario.TipoUsuario == 1)
+            {
+                cCobradores ccr = new cCobradores();
+                ccr.MdiParent = this;
+                ccr.Show();
+            }
+            else
+            {
+                MessageBox.Show("Lo sentimos, no tienes permisos para acceder a este módulo", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
         
         private void consultaDePrestamosToolStripMenuItem_Click(object sender, EventArgs e)

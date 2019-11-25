@@ -118,6 +118,13 @@ namespace ProyectoFinalAP1.UI.Registros
                 paso = false;
             }
 
+            if (MontonumericUpDown.Value > Convert.ToDecimal(BalanceCuotalabel.Text) && MontonumericUpDown.Enabled == true)
+            {
+                MyerrorProvider.SetError(MontonumericUpDown, "El monto del cobro no puede ser mayor que el balance de la cuota seleccionada");
+                MontonumericUpDown.Focus();
+                paso = false;
+            }
+
             return paso;
         }
 
