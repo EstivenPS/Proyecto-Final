@@ -3,22 +3,45 @@
 
 ![Logo](https://user-images.githubusercontent.com/54590857/69562467-9a2e1600-0f85-11ea-90d3-7fb05af524a4.jpg)
 
-_EPS Prestamos es un sistema de prestamos de dinero en efectivo, el cual tiene como proposito optimizar, eficientizar y sistematizar algunos trabajos referentes a prestamos_
+_EPS Prestamos es un sistema de prestamos de dinero en efectivo, el cual tiene como proposito optimizar, eficientizar y sistematizar algunos trabajos referentes a prestamos._
 
-## Comenzando 🚀
+## Login 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+![imagen](https://user-images.githubusercontent.com/54590857/69562663-04df5180-0f86-11ea-979c-3bf812692ec8.png)
 
-Mira **Deployment** para conocer como desplegar el proyecto.
+_Esta es la primera ventana que se muestra al ejecutar el programa, se trata de un Login en el cual el usuario deberá loguearse para poder acceder al sistema. Si es la primera vez que se ejecuta el programa, existe un usuario creado por defecto con accesos de "Administrador/a", cuyo nombre de **Usuario** y **Contraseña** son: **admin** y **admin** respectivamente._ 
 
+### Menú 📋
 
-### Pre-requisitos 📋
+![imagen](https://user-images.githubusercontent.com/54590857/69563516-a0bd8d00-0f87-11ea-9f57-006ac728654c.png)
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_Esta es la ventana de menú en la cual podra desplazarse entre los diferentes registros, consultas y reportes._
 
-```
-Da un ejemplo
-```
+### Registros 📋
+
+# Registro de clientes 📋
+
+![imagen](https://user-images.githubusercontent.com/54590857/69563872-5092fa80-0f88-11ea-943a-6023231f3740.png)
+
+_Este es el registro de clientes, donde podrá agregar los clientes a los que se les podrán realizar prestamos. El "Estado" es para definir si el registro se encuentra activo o inactivo._
+
+# Registro de cobradores 📋
+
+![imagen](https://user-images.githubusercontent.com/54590857/69564832-1a567a80-0f8a-11ea-8cb1-eb4f0c29019e.png)
+
+_Aquí se registran los cobradores que trabajan en la empresa y al igual que en el registro anterior se utiliza el atributo "Estado" para definir si el cobrador se encuentra activo o inactivo._
+
+# Registro de prestamos 📋
+
+![imagen](https://user-images.githubusercontent.com/54590857/69564321-3279ca00-0f89-11ea-9faa-1e54a86de3a2.png)
+
+_En este registro se guardan los prestamos. El cliente y el cobrador se debe elegir en base a los que se hayan registrado en el sistema, también se debe definir el tasa de interés a la que se realizará el prestamo y para finalizar se debe dar clic al botón con la palomilla verde para que se calculen y se muestren las cuotas que tendrá el prestamo en base a los datos llenados anteriormente._
+
+# Registro de usuarios 📋
+
+![imagen](https://user-images.githubusercontent.com/54590857/69565032-7e793e80-0f8a-11ea-84a0-30a3dd0727ab.png)
+
+_Este es el registro de usuarios, al cual sólo puede acceder un usuario con accesos de **"Administrador/a"**. Aquí también se usa el campo "Estado" para definir si el usuario esta activo o inactivo._
 
 ### Instalación 🔧
 
