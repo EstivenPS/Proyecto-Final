@@ -13,14 +13,51 @@ namespace ProyectoFinalAP1.BLL.Tests
     public class CobrosRepositorioTests
     {
         [TestMethod()]
+        public void GuardarTest()
+        {
+            bool paso = false;
+            Cobros cobro = new Cobros();
+            CobrosRepositorio repositorio = new CobrosRepositorio();
+
+            cobro.CobroId = 0;
+            cobro.UsuarioId = 1;
+            cobro.ClienteId = 1;
+            cobro.Fecha = DateTime.Now;
+            cobro.PrestamoId = 1;
+            cobro.NumeroCuota = 1;
+            cobro.Monto = 1;
+
+            paso = repositorio.Guardar(cobro);
+            Assert.AreEqual(paso, true);
+        }
+
+        [TestMethod()]
         public void ModificarTest()
         {
-            CobrosRepositorio repositorio = new CobrosRepositorio();
+            bool paso = false;
             Cobros cobro = new Cobros();
+            CobrosRepositorio repositorio = new CobrosRepositorio();
 
             cobro.CobroId = 1;
+            cobro.UsuarioId = 1;
+            cobro.ClienteId = 1;
+            cobro.Fecha = DateTime.Now;
+            cobro.PrestamoId = 1;
+            cobro.NumeroCuota = 1;
+            cobro.Monto = 1;
 
-            Assert.IsTrue(repositorio.Modificar(cobro));
+            paso = repositorio.Modificar(cobro);
+            Assert.AreEqual(paso, true);
+        }
+
+        [TestMethod()]
+        public void BuscarTest()
+        {
+            Cobros cobro = new Cobros();
+            CobrosRepositorio repositorio = new CobrosRepositorio();
+
+            cobro = repositorio.Buscar(1);
+            Assert.IsTrue(cobro != null);
         }
 
         [TestMethod()]
@@ -30,8 +67,7 @@ namespace ProyectoFinalAP1.BLL.Tests
             CobrosRepositorio repositorio = new CobrosRepositorio();
 
             paso = repositorio.Eliminar(1);
-
-            Assert.Equals(paso, 1);
+            Assert.AreEqual(paso, true);
         }
 
         [TestMethod()]

@@ -22,18 +22,22 @@ namespace ProyectoFinalAP1.BLL.Tests
         public void GuardarTest()
         {
             bool paso = false;
-            PrestamosDetalles cuota = new PrestamosDetalles();
-            RepositorioBase<PrestamosDetalles> repositorio = new RepositorioBase<PrestamosDetalles>();
+            Clientes cliente = new Clientes();
+            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
 
-            cuota.CuotaId = 0;
-            cuota.PrestamoId = 1;
-            cuota.Fecha = DateTime.Now;
-            cuota.NumeroCuota = 1;
-            cuota.Capital = 25;
-            cuota.Interes = 2;
-            cuota.Balance = 27;
+            cliente.ClienteId = 0;
+            cliente.UsuarioId = 1;
+            cliente.Fecha = DateTime.Now;
+            cliente.Nombres = "Prueba";
+            cliente.Apellidos = "Prueba";
+            cliente.Direccion = "Prueba";
+            cliente.Email = "Prueba";
+            cliente.Cedula = "000-0000000-0";
+            cliente.Telefono = "000-000-0000";
+            cliente.Celular = "000-000-0000";
+            cliente.Activo = true;
 
-            paso = repositorio.Guardar(cuota);
+            paso = repositorio.Guardar(cliente);
             Assert.AreEqual(paso, true);
         }
 
@@ -41,39 +45,43 @@ namespace ProyectoFinalAP1.BLL.Tests
         public void ModificarTest()
         {
             bool paso = false;
-            PrestamosDetalles cuota = new PrestamosDetalles();
-            RepositorioBase<PrestamosDetalles> repositorio = new RepositorioBase<PrestamosDetalles>();
+            Clientes cliente = new Clientes();
+            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
 
-            cuota.CuotaId = 1;
-            cuota.PrestamoId = 1;
-            cuota.Fecha = DateTime.Now;
-            cuota.NumeroCuota = 2;
-            cuota.Capital = 25;
-            cuota.Interes = 2;
-            cuota.Balance = 27;
+            cliente.ClienteId = 2;
+            cliente.UsuarioId = 1;
+            cliente.Fecha = DateTime.Now;
+            cliente.Nombres = "PruebaModificada";
+            cliente.Apellidos = "PruebaModificada";
+            cliente.Direccion = "PruebaModificada";
+            cliente.Email = "PruebaModificada";
+            cliente.Cedula = "000-0000000-0";
+            cliente.Telefono = "000-000-0000";
+            cliente.Celular = "000-000-0000";
+            cliente.Activo = true;
 
-            paso = repositorio.Modificar(cuota);
-            Assert.AreEqual(paso, true);
-        }
-
-        [TestMethod()]
-        public void EliminarTest()
-        {
-            bool paso = false;
-            RepositorioBase<PrestamosDetalles> repositorio = new RepositorioBase<PrestamosDetalles>();
-
-            paso = repositorio.Eliminar(1);
+            paso = repositorio.Modificar(cliente);
             Assert.AreEqual(paso, true);
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            PrestamosDetalles cuota = new PrestamosDetalles();
-            RepositorioBase<PrestamosDetalles> repositorio = new RepositorioBase<PrestamosDetalles>();
+            Clientes cliente = new Clientes();
+            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
 
-            cuota = repositorio.Buscar(1);
-            Assert.IsTrue(cuota != null);
+            cliente = repositorio.Buscar(2);
+            Assert.IsTrue(cliente != null);
+        }
+
+        [TestMethod()]
+        public void EliminarTest()
+        {
+            bool paso = false;
+            RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
+
+            paso = repositorio.Eliminar(2);
+            Assert.AreEqual(paso, true);
         }
 
         [TestMethod()]
