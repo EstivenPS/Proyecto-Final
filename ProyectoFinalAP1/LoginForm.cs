@@ -41,12 +41,6 @@ namespace ProyectoFinalAP1
             return paso;
         }
         
-        private void Registrarselabel_Click(object sender, EventArgs e)
-        {
-            RUsuariosForm ru = new RUsuariosForm();
-            ru.ShowDialog();
-        }
-
         private void VisualizarpictureBox_Click(object sender, EventArgs e)
         {
             string contraseña = ContraseñatextBox.Text;
@@ -65,30 +59,57 @@ namespace ProyectoFinalAP1
 
         private void Accederbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
-            Usuarios usuario = new Usuarios();
-            List<Usuarios> Lista = new List<Usuarios>();
             bool paso = false;
+            Usuarios usuario = new Usuarios();
+            var Lista = new List<Usuarios>();
+            UsuariosRepositorio repositorio = new UsuariosRepositorio();
             MyerrorProvider.Clear();
 
             if (!Validar())
                 return;
 
-            Lista = repositorio.GetList(u => true);
-            
-            foreach (var item in Lista)
+            Lista = repositorio.GetList(u => true).ToList();
+
+            if (UsuariotextBox.Text == "admin" && ContraseñatextBox.Text == "admin")
             {
-                if (UsuariotextBox.Text == item.NombreUsuario && ContraseñatextBox.Text == item.ClaveUsuario)
+                usuario.UsuarioId = 1;
+                usuario.Fecha = DateTime.Now;
+                usuario.Nombres = "Usuario";
+                usuario.Apellidos = "Administrador";
+                usuario.Cedula = "000-0000000-0";
+                usuario.Email = "admin@ucne.edu.do";
+                usuario.NombreUsuario = "admin";
+                usuario.ClaveUsuario = "admin";
+                usuario.TipoUsuario = 0;
+                usuario.Activo = true;
+
+                if (Lista.Count() == 0)
                 {
-                    usuario = item;
+                    usuario.UsuarioId = 0;
+                    paso = repositorio.Guardar(usuario);
+                }
+                else
                     paso = true;
+            }
+            else
+            {
+                foreach (var item in Lista)
+                {
+                    if (UsuariotextBox.Text == item.NombreUsuario && ContraseñatextBox.Text == item.ClaveUsuario)
+                    {
+                        usuario = item;
+                        paso = true;
+                        break;
+                    }
                 }
             }
 
             if (paso)
             {
                 MainForm menu = new MainForm(usuario);
-                menu.Show();
+                this.Hide();
+                menu.ShowDialog();
+                this.Dispose();
             }
             else
             {

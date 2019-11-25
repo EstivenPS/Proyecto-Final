@@ -16,6 +16,7 @@ namespace ProyectoFinalAP1.Entidades
         public int CobradorId { get; set; }
         public DateTime Fecha { get; set; }
         public decimal MontoPrestado { get; set; }
+        public decimal PorcientoInteres { get; set; }
         public decimal Interes { get; set; }
         public decimal Balance { get; set; }
         public int CantidadCuotas { get; set; }
@@ -29,6 +30,7 @@ namespace ProyectoFinalAP1.Entidades
             CobradorId = 0;
             Fecha = DateTime.Now;
             MontoPrestado = 0;
+            PorcientoInteres = 0;
             Interes = 0;
             Balance = 0;
             CantidadCuotas = 0;

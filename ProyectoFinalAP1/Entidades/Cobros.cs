@@ -12,6 +12,7 @@ namespace ProyectoFinalAP1.Entidades
         [Key]
         public int CobroId { get; set; }
         public int UsuarioId { get; set; }
+        public int ClienteId { get; set; }
         public int PrestamoId { get; set; }
         public DateTime Fecha { get; set; }
         public int NumeroCuota { get; set; }
@@ -21,6 +22,7 @@ namespace ProyectoFinalAP1.Entidades
         {
             CobroId = 0;
             UsuarioId = 0;
+            ClienteId = 0;
             PrestamoId = 0;
             Fecha = DateTime.Now;
             NumeroCuota = 0;

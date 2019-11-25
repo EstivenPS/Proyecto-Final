@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,12 +39,8 @@
             this.consultaDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaDePrestamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaDeCobradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteDePréstamosDeHoyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registroDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultaDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDeUsuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaDeUsuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -53,8 +50,6 @@
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrosToolStripMenuItem,
             this.consultasToolStripMenuItem,
-            this.reportesToolStripMenuItem,
-            this.usuariosToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -68,7 +63,8 @@
             this.registroDeClientesToolStripMenuItem,
             this.registroDePrestamosToolStripMenuItem,
             this.registroDeCobradoresToolStripMenuItem,
-            this.registroDeCobrosToolStripMenuItem});
+            this.registroDeCobrosToolStripMenuItem,
+            this.registroDeUsuariosToolStripMenuItem1});
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.registrosToolStripMenuItem.Text = "Registros";
@@ -106,7 +102,8 @@
             this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultaDeClientesToolStripMenuItem,
             this.consultaDePrestamosToolStripMenuItem,
-            this.consultaDeCobradoresToolStripMenuItem});
+            this.consultaDeCobradoresToolStripMenuItem,
+            this.consultaDeUsuariosToolStripMenuItem1});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "Consultas";
@@ -132,51 +129,19 @@
             this.consultaDeCobradoresToolStripMenuItem.Text = "Consulta de Cobradores";
             this.consultaDeCobradoresToolStripMenuItem.Click += new System.EventHandler(this.consultaDeCobradoresToolStripMenuItem_Click);
             // 
-            // reportesToolStripMenuItem
+            // registroDeUsuariosToolStripMenuItem1
             // 
-            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reporteDePréstamosDeHoyToolStripMenuItem,
-            this.reporteDeToolStripMenuItem});
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.reportesToolStripMenuItem.Text = "Reportes";
+            this.registroDeUsuariosToolStripMenuItem1.Name = "registroDeUsuariosToolStripMenuItem1";
+            this.registroDeUsuariosToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
+            this.registroDeUsuariosToolStripMenuItem1.Text = "Registro de Usuarios";
+            this.registroDeUsuariosToolStripMenuItem1.Click += new System.EventHandler(this.registroDeUsuariosToolStripMenuItem1_Click);
             // 
-            // reporteDePréstamosDeHoyToolStripMenuItem
+            // consultaDeUsuariosToolStripMenuItem1
             // 
-            this.reporteDePréstamosDeHoyToolStripMenuItem.Name = "reporteDePréstamosDeHoyToolStripMenuItem";
-            this.reporteDePréstamosDeHoyToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.reporteDePréstamosDeHoyToolStripMenuItem.Text = "Reporte de préstamos de hoy";
-            this.reporteDePréstamosDeHoyToolStripMenuItem.Click += new System.EventHandler(this.reporteDePréstamosDeHoyToolStripMenuItem_Click);
-            // 
-            // reporteDeToolStripMenuItem
-            // 
-            this.reporteDeToolStripMenuItem.Name = "reporteDeToolStripMenuItem";
-            this.reporteDeToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.reporteDeToolStripMenuItem.Text = "Reporte de cobros de hoy";
-            this.reporteDeToolStripMenuItem.Click += new System.EventHandler(this.reporteDeToolStripMenuItem_Click);
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registroDeUsuariosToolStripMenuItem,
-            this.consultaDeUsuariosToolStripMenuItem});
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            // 
-            // registroDeUsuariosToolStripMenuItem
-            // 
-            this.registroDeUsuariosToolStripMenuItem.Name = "registroDeUsuariosToolStripMenuItem";
-            this.registroDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.registroDeUsuariosToolStripMenuItem.Text = "Registro de Usuarios";
-            this.registroDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.registroDeUsuariosToolStripMenuItem_Click);
-            // 
-            // consultaDeUsuariosToolStripMenuItem
-            // 
-            this.consultaDeUsuariosToolStripMenuItem.Name = "consultaDeUsuariosToolStripMenuItem";
-            this.consultaDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.consultaDeUsuariosToolStripMenuItem.Text = "Consulta de Usuarios";
-            this.consultaDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.consultaDeUsuariosToolStripMenuItem_Click);
+            this.consultaDeUsuariosToolStripMenuItem1.Name = "consultaDeUsuariosToolStripMenuItem1";
+            this.consultaDeUsuariosToolStripMenuItem1.Size = new System.Drawing.Size(201, 22);
+            this.consultaDeUsuariosToolStripMenuItem1.Text = "Consulta de Usuarios";
+            this.consultaDeUsuariosToolStripMenuItem1.Click += new System.EventHandler(this.consultaDeUsuariosToolStripMenuItem1_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -191,9 +156,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip.ResumeLayout(false);
@@ -208,19 +177,15 @@
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem registrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registroDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeCobradoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDePrestamosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeCobrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaDeClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaDeCobradoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultaDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaDePrestamosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteDeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteDePréstamosDeHoyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroDeUsuariosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem consultaDeUsuariosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }

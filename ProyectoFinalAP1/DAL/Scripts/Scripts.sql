@@ -2,14 +2,6 @@ Create database PrestamosDB
 Go
 Use PrestamosDB
 Go
-Create table Empresas
-(
-	EmpresaId int Primary Key Identity,
-	Nombre varchar(50),
-	Direccion varchar(100),
-	Telefono varchar(13)
-);
-Go
 Create table Usuarios
 (
 	UsuarioId int Primary Key Identity,
@@ -61,6 +53,7 @@ Create table Prestamos
 	UsuarioId int Constraint FK_UsuarioId Foreign Key (UsuarioId) References Usuarios(UsuarioId),
 	Fecha date Default getdate(),
 	MontoPrestado decimal(9,2),
+	PorcientoInteres decimal(9,2),
 	Interes decimal(9,2),
 	Balance decimal(9,2),
 	CantidadCuotas int
@@ -80,6 +73,7 @@ Go
 Create table Cobros
 (
 	CobroId int Primary Key Identity,
+	ClienteId int Constraint FK_ClienteId_Cobros Foreign Key (ClienteId) References Clientes(ClienteId),
 	PrestamoId int Constraint FK_PrestamoId_Cobros Foreign Key (PrestamoId) References Prestamos(PrestamoId) On Delete Cascade On Update Cascade,
 	UsuarioId int Constraint FK_UsuarioId_Cobros Foreign Key (UsuarioId) References Usuarios(UsuarioId),
 	Fecha date Default getdate(),

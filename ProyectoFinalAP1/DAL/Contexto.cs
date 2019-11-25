@@ -10,7 +10,6 @@ namespace ProyectoFinalAP1.DAL
 {
     public class Contexto : DbContext
     {
-        public DbSet<Empresas> Empresa { get; set; }
         public DbSet<Usuarios> Usuario { get; set; }
         public DbSet<Cobradores> Cobrador { get; set; }
         public DbSet<Clientes> Cliente { get; set; }

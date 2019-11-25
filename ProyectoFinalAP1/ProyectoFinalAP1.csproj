@@ -75,7 +75,6 @@
     <Compile Include="Entidades\Cobradores.cs" />
     <Compile Include="Entidades\Cobros.cs" />
     <Compile Include="Entidades\PrestamosDetalles.cs" />
-    <Compile Include="Entidades\Empresas.cs" />
     <Compile Include="Entidades\Prestamos.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="LoginForm.cs">
@@ -92,17 +91,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Consultas\CPrestamosForm.cs">
+    <Compile Include="UI\Consultas\cCobros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Consultas\CPrestamosForm.Designer.cs">
-      <DependentUpon>CPrestamosForm.cs</DependentUpon>
+    <Compile Include="UI\Consultas\cCobros.Designer.cs">
+      <DependentUpon>cCobros.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Consultas\CUsuariosForm.cs">
+    <Compile Include="UI\Consultas\cPrestamos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Consultas\CUsuariosForm.Designer.cs">
-      <DependentUpon>CUsuariosForm.cs</DependentUpon>
+    <Compile Include="UI\Consultas\cPrestamos.Designer.cs">
+      <DependentUpon>cPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\cUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cUsuarios.Designer.cs">
+      <DependentUpon>cUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\ClientesReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\ClientesReportViewer.Designer.cs">
+      <DependentUpon>ClientesReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\CobradoresReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\CobradoresReportViewer.Designer.cs">
+      <DependentUpon>CobradoresReportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Reportes\CobrosReportViewer.cs">
       <SubType>Form</SubType>
@@ -116,11 +133,77 @@
     <Compile Include="UI\Reportes\PrestamosReportViewer.Designer.cs">
       <DependentUpon>PrestamosReportViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Reportes\ReporteClientesCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteClientesCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\Reportes\ReporteCobrosCrystalReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ReporteCobrosCrystalReport.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\Ventanas de Dialogo\EliminarCobradoresVDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\Ventanas de Dialogo\EliminarCobradoresVDForm.Designer.cs">
+      <DependentUpon>EliminarCobradoresVDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\cClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cClientes.Designer.cs">
+      <DependentUpon>cClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\cCobradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cCobradores.Designer.cs">
+      <DependentUpon>cCobradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rCobros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rCobros.Designer.cs">
+      <DependentUpon>rCobros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rClientes.Designer.cs">
+      <DependentUpon>rClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rCobradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rCobradores.Designer.cs">
+      <DependentUpon>rCobradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rPrestamos.Designer.cs">
+      <DependentUpon>rPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rUsuarios.Designer.cs">
+      <DependentUpon>rUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\Ventanas de Dialogo\EliminarClientesVDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\Ventanas de Dialogo\EliminarClientesVDForm.Designer.cs">
+      <DependentUpon>EliminarClientesVDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\Ventanas de Dialogo\EliminarUsuariosVDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\Ventanas de Dialogo\EliminarUsuariosVDForm.Designer.cs">
+      <DependentUpon>EliminarUsuariosVDForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Reportes\ReportePrestamosCrystalReport.cs">
       <AutoGen>True</AutoGen>
@@ -128,65 +211,23 @@
       <DependentUpon>ReportePrestamosCrystalReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\Ventanas de Dialogo\EliminarCobradoresVDForm.cs">
+    <Compile Include="UI\Reportes\ReportesCobradoresCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportesCobradoresCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\ReporteUsuariosCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteUsuariosCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\UsuariosReportViewer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Ventanas de Dialogo\EliminarCobradoresVDForm.Designer.cs">
-      <DependentUpon>EliminarCobradoresVDForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Consultas\CClientesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Consultas\CClientesForm.Designer.cs">
-      <DependentUpon>CClientesForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Consultas\CCobradoresForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Consultas\CCobradoresForm.Designer.cs">
-      <DependentUpon>CCobradoresForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Registros\RCobrosForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Registros\RCobrosForm.Designer.cs">
-      <DependentUpon>RCobrosForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Registros\RClientesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Registros\RClientesForm.Designer.cs">
-      <DependentUpon>RClientesForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Registros\RCobradoresForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Registros\RCobradoresForm.Designer.cs">
-      <DependentUpon>RCobradoresForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Registros\RPrestamosForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Registros\RPrestamosForm.Designer.cs">
-      <DependentUpon>RPrestamosForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Registros\RUsuariosForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Registros\RUsuariosForm.Designer.cs">
-      <DependentUpon>RUsuariosForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Ventanas de Dialogo\EliminarClientesVDForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Ventanas de Dialogo\EliminarClientesVDForm.Designer.cs">
-      <DependentUpon>EliminarClientesVDForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Ventanas de Dialogo\EliminarUsuariosVDForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Ventanas de Dialogo\EliminarUsuariosVDForm.Designer.cs">
-      <DependentUpon>EliminarUsuariosVDForm.cs</DependentUpon>
+    <Compile Include="UI\Reportes\UsuariosReportViewer.Designer.cs">
+      <DependentUpon>UsuariosReportViewer.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -203,11 +244,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\Consultas\CPrestamosForm.resx">
-      <DependentUpon>CPrestamosForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Consultas\cCobros.resx">
+      <DependentUpon>cCobros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Consultas\CUsuariosForm.resx">
-      <DependentUpon>CUsuariosForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Consultas\cPrestamos.resx">
+      <DependentUpon>cPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\cUsuarios.resx">
+      <DependentUpon>cUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\ClientesReportViewer.resx">
+      <DependentUpon>ClientesReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\CobradoresReportViewer.resx">
+      <DependentUpon>CobradoresReportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\CobrosReportViewer.resx">
       <DependentUpon>CobrosReportViewer.cs</DependentUpon>
@@ -215,43 +265,58 @@
     <EmbeddedResource Include="UI\Reportes\PrestamosReportViewer.resx">
       <DependentUpon>PrestamosReportViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\ReporteClientesCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteClientesCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\ReporteCobrosCrystalReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteCobrosCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\Ventanas de Dialogo\EliminarCobradoresVDForm.resx">
+      <DependentUpon>EliminarCobradoresVDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\cClientes.resx">
+      <DependentUpon>cClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\cCobradores.resx">
+      <DependentUpon>cCobradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rClientes.resx">
+      <DependentUpon>rClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rCobradores.resx">
+      <DependentUpon>rCobradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rCobros.resx">
+      <DependentUpon>rCobros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rPrestamos.resx">
+      <DependentUpon>rPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rUsuarios.resx">
+      <DependentUpon>rUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\Ventanas de Dialogo\EliminarClientesVDForm.resx">
+      <DependentUpon>EliminarClientesVDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\Ventanas de Dialogo\EliminarUsuariosVDForm.resx">
+      <DependentUpon>EliminarUsuariosVDForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\ReportePrestamosCrystalReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReportePrestamosCrystalReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Ventanas de Dialogo\EliminarCobradoresVDForm.resx">
-      <DependentUpon>EliminarCobradoresVDForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Reportes\ReportesCobradoresCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportesCobradoresCrystalReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Consultas\CClientesForm.resx">
-      <DependentUpon>CClientesForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Reportes\ReporteUsuariosCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteUsuariosCrystalReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Consultas\CCobradoresForm.resx">
-      <DependentUpon>CCobradoresForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\RClientesForm.resx">
-      <DependentUpon>RClientesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\RCobradoresForm.resx">
-      <DependentUpon>RCobradoresForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\RCobrosForm.resx">
-      <DependentUpon>RCobrosForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\RPrestamosForm.resx">
-      <DependentUpon>RPrestamosForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\RUsuariosForm.resx">
-      <DependentUpon>RUsuariosForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Ventanas de Dialogo\EliminarClientesVDForm.resx">
-      <DependentUpon>EliminarClientesVDForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Ventanas de Dialogo\EliminarUsuariosVDForm.resx">
-      <DependentUpon>EliminarUsuariosVDForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Reportes\UsuariosReportViewer.resx">
+      <DependentUpon>UsuariosReportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

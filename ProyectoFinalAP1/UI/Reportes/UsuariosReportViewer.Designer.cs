@@ -1,6 +1,6 @@
 ﻿namespace ProyectoFinalAP1.UI.Reportes
 {
-    partial class PrestamosReportViewer
+    partial class UsuariosReportViewer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrestamosReportViewer));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuariosReportViewer));
             this.MycrystalReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
@@ -43,18 +43,18 @@
             this.MycrystalReportViewer.Size = new System.Drawing.Size(800, 450);
             this.MycrystalReportViewer.TabIndex = 0;
             // 
-            // PrestamosReportViewer
+            // UsuariosReportViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.MycrystalReportViewer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "PrestamosReportViewer";
+            this.Name = "UsuariosReportViewer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reporte de préstamos";
+            this.Text = "Reporte de usuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.PrestamosReportViewer_Load);
+            this.Load += new System.EventHandler(this.UsuariosReportViewer_Load);
             this.ResumeLayout(false);
 
         }

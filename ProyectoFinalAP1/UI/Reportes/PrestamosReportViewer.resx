@@ -117,4 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAANEDAADRAwAAAAAAAAAA
+        AAD///8A////AJ62whWftcUwn7XFMJ+1xTCftcUwn7XFMDjD+E0txv3RLcb8xR+37JIYr+TJGa/k0Biv
+        5J8ZruNS////AKG3xmehtsf3obbH/6G2x/+htsf/obbH/6G2x/89xfXwLcb8/y3G/P8sxPjBGJ/TzRig
+        08sYo9e/Gafcmp60yyKhtsf4obbH/6G2x/+htsf/obbH/6G2x/+htsf/SMLw/y3G/P8txvz/KcL3vxen
+        3MQYptrDGKHWwRif1KChtsd3obbH/6G2x/+htsf/obbH/6G2x/+htsf/obbH/4y50f9Rwev/TMHs7Rux
+        5s4YrOHBGKrevxit48gYr+SoobfHqaG2x/+juMn/obbH/6G2x/+htsf/obbH/6G2x/+htsf/obbH/32w
+        ytQYn9LqGKTYyRim2sIYotXWGJ3StKG2x56htsf/ssXU/6G2x/+htsf/obbH/6G2x/+htsf/obbH/6G2
+        x/9+tc/TGK/k+Rmx5tQbsufJGLDl5xiv47ait8dgobbH/7DE0/+musv/obbH/6G2x/+htsf/obbH/6G2
+        x/+htsf/m7bJ9EvC780vxvzgLcb88S3G/MYpwfVKn7+/CKG2x+Kjt8j/scTU/6O3yP+htsf/obbH/6G2
+        x/+htsf/obbH/6G2x/+htsfsn7fHIP///wD///8A////AP///wCguMorobbI76O4yf+vwtL/rcHR/6G2
+        x/+htsf/obbH/6G2x/+htsf8o7XIRf///wD///8A////AP///wD///8A////AKC2xSOitsfKobbH/6G2
+        x/+htsf/obbH/6G2x/+htcfXobjGNv///wD///8A////AP///wD///8A////AP///wD///8AmczMBaG2
+        x6Chtsf/obbH/6G2x/+htsezn7+/CP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wBziJl6boOT/26Dk/9ug5P/YXSDwzFAS5hVVVUD////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8AaoCQam2Ckv9tgpL/bYKS/2uBj2n///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AG+ElG5whZb/cIWW/3CFlv9pfY5a////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wCht8ebobbH/6G2x/+htsf/orbHe////wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wCStrYHobbH4aG1x9ChtseaobbH5aG1x8n///8A////AP///wD///8A////AP//
+        /wD///8AwAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAACADwAAwB8AAOA/AADwHwAA8H8AAPB/
+        AADwfwAA4H8AAA==
+</value>
+  </data>
 </root>

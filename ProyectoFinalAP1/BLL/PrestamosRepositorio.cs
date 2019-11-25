@@ -17,11 +17,18 @@ namespace ProyectoFinalAP1.BLL
             try
             {
                 var Anterior = _contexto.Prestamos.Find(prestamo.PrestamoId);
+
                 foreach (var item in Anterior.Cuotas)
                 {
-                    if (!prestamo.Cuotas.Exists(d => d.PrestamoId == item.PrestamoId))
-                        _contexto.Entry(item).State = EntityState.Deleted;
+                    _contexto.Entry(item).State = EntityState.Deleted;
                 }
+
+                foreach (var item in prestamo.Cuotas)
+                {
+                    _contexto.Entry(item).State = EntityState.Added;
+                }
+
+                _contexto.SaveChanges();
             }
             catch(Exception)
             {
@@ -29,7 +36,6 @@ namespace ProyectoFinalAP1.BLL
             }
 
             paso = base.Modificar(prestamo);
-
             return paso;
         }
 

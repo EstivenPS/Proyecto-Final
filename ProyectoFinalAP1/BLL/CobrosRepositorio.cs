@@ -10,24 +10,71 @@ namespace ProyectoFinalAP1.BLL
 {
     public class CobrosRepositorio : RepositorioBase<Cobros>
     {
+        public override bool Modificar(Cobros entity)
+        {
+            bool paso = false;
+            paso = base.Modificar(entity);
+            List<PrestamosDetalles> cuotas = new List<PrestamosDetalles>();
+            RepositorioBase<PrestamosDetalles> repositorioCuotas = new RepositorioBase<PrestamosDetalles>();
+            var Anterior = _contexto.Cobro.Find(entity.CobroId);
+
+            //Uso el GetList debido a que es el único que conozco que me permite aplicar condiciones a la hora de buscar registros
+            cuotas = repositorioCuotas.GetList(c => true).Where(c => c.PrestamoId == entity.PrestamoId && c.NumeroCuota == entity.NumeroCuota).ToList();
+            //Uso el foreach para poder sacar el único elemento que tendrá la lista enlazada, el cual es la cuota seleccionada
+            foreach (var item in cuotas)
+            {
+                item.Balance += Anterior.Monto;
+                item.Balance -= entity.Monto;
+
+                _contexto.Entry(item).State = EntityState.Modified;
+                paso = _contexto.SaveChanges() > 0;
+                break;
+            }
+
+            return paso;
+        }
+        public override bool Eliminar(int id)
+        {   //Esto es para que cuando se elimine un cobro, el monto de ese cobro se le vuelva a sumar a su respectiva cuota
+            List<PrestamosDetalles> cuotas = new List<PrestamosDetalles>();
+            RepositorioBase<PrestamosDetalles> repositorioCuotas = new RepositorioBase<PrestamosDetalles>();
+            Cobros cobro = new Cobros();
+
+            cobro = base.Buscar(id);
+            //Uso el GetList debido a que es el único que conozco que me permite aplicar condiciones a la hora de buscar registros
+            cuotas = repositorioCuotas.GetList(c => true).Where(c => c.PrestamoId == cobro.PrestamoId && c.NumeroCuota == cobro.NumeroCuota).ToList();
+            //Uso el foreach para poder sacar el único elemento que tendrá la lista enlazada, el cual es la cuota seleccionada
+            foreach (var item in cuotas)
+            {
+                item.Balance += cobro.Monto;
+                _contexto.Entry(item).State = EntityState.Modified;
+                _contexto.SaveChanges();
+                break;
+            }
+
+            return base.Eliminar(id);
+        }
+
         public virtual bool CobrarCuota(Cobros cobro)
         {
             bool paso = false;
+            var cuotas = new List<PrestamosDetalles>();
+            Prestamos prestamo = new Prestamos();
             PrestamosRepositorio repositorio = new PrestamosRepositorio();
 
             try
             {
-                List<PrestamosDetalles> cuotas = repositorio.Buscar(cobro.PrestamoId).Cuotas;
+                cuotas = repositorio.Buscar(cobro.PrestamoId).Cuotas;
+                prestamo = repositorio.Buscar(cobro.PrestamoId);
 
                 foreach (var item in cuotas)
                 {
                     if (item.NumeroCuota == cobro.NumeroCuota)
                     {
-                        if (item.Balance != 0)
-                            item.Balance = item.Balance - cobro.Monto;
-                        
+                        item.Balance -= cobro.Monto;
+
                         _contexto.Entry(item).State = EntityState.Modified;
                         paso = _contexto.SaveChanges() > 0;
+                        break;
                     }
                 }
             }
