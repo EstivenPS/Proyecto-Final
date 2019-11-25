@@ -76,11 +76,11 @@ _Debe contar con una computadora que tenga como mínimo las siguientes especific
 * Photoshop CC (Para el logo de la empresa).
 * Mozilla Firefox.
 
-## ✒️ Autores 
+## ✒️ Autor 
 
 **Estiven de Jesus Padilla Santos (2017-0596).** 
 
-## Expresiones de Gratitud 🎁
+## 🎁 Expresiones de Gratitud 
 
 * Gracias al profesor Enel por enseñarme todos los conocimientos requeridos para poder darle vida a este software 📢.
 * Gracias a mis amigos por ayudar en mis momento de duda 🤓. 
