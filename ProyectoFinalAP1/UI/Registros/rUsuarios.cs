@@ -46,7 +46,7 @@ namespace ProyectoFinalAP1.UI.Registros
             usuario.Cedula = CedulamaskedTextBox.Text;
             usuario.Email = EmailtextBox.Text;
             usuario.NombreUsuario = NombreUsuariotextBox.Text;
-            usuario.ClaveUsuario = ContrasenatextBox.Text;
+            usuario.ClaveUsuario = Encriptar(ContrasenatextBox.Text);
             usuario.TipoUsuario = TipoUsuariocomboBox.SelectedIndex;
             usuario.Activo = ActivocheckBox.Checked;
             
@@ -62,7 +62,7 @@ namespace ProyectoFinalAP1.UI.Registros
             CedulamaskedTextBox.Text = usuario.Cedula;
             EmailtextBox.Text = usuario.Email;
             NombreUsuariotextBox.Text = usuario.NombreUsuario;
-            ContrasenatextBox.Text = usuario.ClaveUsuario;
+            ContrasenatextBox.Text = DesEncriptar(usuario.ClaveUsuario);
             TipoUsuariocomboBox.SelectedIndex = usuario.TipoUsuario;
             ActivocheckBox.Checked = usuario.Activo;
         }
@@ -129,6 +129,22 @@ namespace ProyectoFinalAP1.UI.Registros
             }
 
             return paso;
+        }
+
+        private string Encriptar(string cadenaAencriptar)//Esta función encripta una cadena que se le pasa por parámentro
+        {
+            string result = string.Empty;
+            byte[] encryted = System.Text.Encoding.Unicode.GetBytes(cadenaAencriptar);
+            result = Convert.ToBase64String(encryted);
+            return result;
+        }
+
+        private string DesEncriptar(string cadenaAdesencriptar)//Esta función desencripta la cadena que se le pasa por parámentro
+        {
+            string result = string.Empty;
+            byte[] decryted = Convert.FromBase64String(cadenaAdesencriptar);
+            result = System.Text.Encoding.Unicode.GetString(decryted);
+            return result;
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)

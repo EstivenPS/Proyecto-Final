@@ -95,7 +95,7 @@ namespace ProyectoFinalAP1
             {
                 foreach (var item in Lista)
                 {
-                    if (UsuariotextBox.Text == item.NombreUsuario && ContraseñatextBox.Text == item.ClaveUsuario)
+                    if (UsuariotextBox.Text == item.NombreUsuario && ContraseñatextBox.Text == DesEncriptar(item.ClaveUsuario))
                     {
                         usuario = item;
                         paso = true;
@@ -121,6 +121,14 @@ namespace ProyectoFinalAP1
         {
             ContraseñatextBox.UseSystemPasswordChar = true;
             MyerrorProvider.Clear();
+        }
+        
+        private string DesEncriptar(string cadenaAdesencriptar)//Esta función desencripta la cadena que se le pasa por parámentro
+        {
+            string result = string.Empty;
+            byte[] decryted = Convert.FromBase64String(cadenaAdesencriptar);
+            result = System.Text.Encoding.Unicode.GetString(decryted);
+            return result;
         }
     }
 }

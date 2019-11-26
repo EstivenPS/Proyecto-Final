@@ -16,22 +16,8 @@ namespace ProyectoFinalAP1.BLL.Tests
         public void DesactivarTest()
         {
             bool paso = false;
-            Usuarios usuario = new Usuarios();
             UsuariosRepositorio repositorio = new UsuariosRepositorio();
-
-            usuario.UsuarioId = 0;
-            usuario.Fecha = DateTime.Now;
-            usuario.Nombres = "Prueba";
-            usuario.Apellidos = "Prueba";
-            usuario.Cedula = "000-0000000-0";
-            usuario.Email = "Prueba";
-            usuario.NombreUsuario = "Prueba";
-            usuario.ClaveUsuario = "Prueba";
-            usuario.TipoUsuario = 2;
-            usuario.Activo = true;
-
-            repositorio.Guardar(usuario);
-
+            
             paso = repositorio.Desactivar(1);
 
             Assert.Equals(paso, true);
