@@ -19,8 +19,7 @@ namespace ProyectoFinalAP1.BLL.Tests
             ClientesRepositorio repositorio = new ClientesRepositorio();
 
             paso = repositorio.Desactivar(1);
-
-            Assert.Equals(repositorio.Desactivar(1), true);
+            Assert.AreEqual(paso, true);
         }
 
         [TestMethod()]

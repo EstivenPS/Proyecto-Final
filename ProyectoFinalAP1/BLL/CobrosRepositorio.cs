@@ -13,23 +13,33 @@ namespace ProyectoFinalAP1.BLL
         public override bool Modificar(Cobros entity)
         {
             bool paso = false;
-            paso = base.Modificar(entity);
             List<PrestamosDetalles> cuotas = new List<PrestamosDetalles>();
             RepositorioBase<PrestamosDetalles> repositorioCuotas = new RepositorioBase<PrestamosDetalles>();
-            var Anterior = _contexto.Cobro.Find(entity.CobroId);
 
-            //Uso el GetList debido a que es el único que conozco que me permite aplicar condiciones a la hora de buscar registros
-            cuotas = repositorioCuotas.GetList(c => true).Where(c => c.PrestamoId == entity.PrestamoId && c.NumeroCuota == entity.NumeroCuota).ToList();
-            //Uso el foreach para poder sacar el único elemento que tendrá la lista enlazada, el cual es la cuota seleccionada
-            foreach (var item in cuotas)
+            try
             {
-                item.Balance += Anterior.Monto;
-                item.Balance -= entity.Monto;
+                var Anterior = _contexto.Cobro.Find(entity.CobroId);
 
-                _contexto.Entry(item).State = EntityState.Modified;
-                paso = _contexto.SaveChanges() > 0;
-                break;
+                //Uso el GetList debido a que es el único que conozco que me permite aplicar condiciones a la hora de buscar registros
+                cuotas = repositorioCuotas.GetList(c => true).Where(c => c.PrestamoId == entity.PrestamoId && c.NumeroCuota == entity.NumeroCuota).ToList();
+
+                //Uso el foreach para poder sacar el único elemento que tendrá la lista enlazada, el cual es la cuota seleccionada
+                foreach (var item in cuotas)
+                {
+                    item.Balance += Anterior.Monto;
+                    item.Balance -= entity.Monto;
+
+                    _contexto.Entry(item).State = EntityState.Modified;
+                    _contexto.SaveChanges();
+                    break;
+                }
             }
+            catch(Exception)
+            {
+
+            }
+
+            paso = base.Modificar(entity);
 
             return paso;
         }
@@ -39,16 +49,23 @@ namespace ProyectoFinalAP1.BLL
             RepositorioBase<PrestamosDetalles> repositorioCuotas = new RepositorioBase<PrestamosDetalles>();
             Cobros cobro = new Cobros();
 
-            cobro = base.Buscar(id);
-            //Uso el GetList debido a que es el único que conozco que me permite aplicar condiciones a la hora de buscar registros
-            cuotas = repositorioCuotas.GetList(c => true).Where(c => c.PrestamoId == cobro.PrestamoId && c.NumeroCuota == cobro.NumeroCuota).ToList();
-            //Uso el foreach para poder sacar el único elemento que tendrá la lista enlazada, el cual es la cuota seleccionada
-            foreach (var item in cuotas)
+            try
             {
-                item.Balance += cobro.Monto;
-                _contexto.Entry(item).State = EntityState.Modified;
-                _contexto.SaveChanges();
-                break;
+                cobro = base.Buscar(id);
+                //Uso el GetList debido a que es el único que conozco que me permite aplicar condiciones a la hora de buscar registros
+                cuotas = repositorioCuotas.GetList(c => true).Where(c => c.PrestamoId == cobro.PrestamoId && c.NumeroCuota == cobro.NumeroCuota).ToList();
+                //Uso el foreach para poder sacar el único elemento que tendrá la lista enlazada, el cual es la cuota seleccionada
+                foreach (var item in cuotas)
+                {
+                    item.Balance += cobro.Monto;
+                    _contexto.Entry(item).State = EntityState.Modified;
+                    _contexto.SaveChanges();
+                    break;
+                }
+            }
+            catch(Exception)
+            {
+                throw;
             }
 
             return base.Eliminar(id);
@@ -64,7 +81,6 @@ namespace ProyectoFinalAP1.BLL
             try
             {
                 cuotas = repositorio.Buscar(cobro.PrestamoId).Cuotas;
-                prestamo = repositorio.Buscar(cobro.PrestamoId);
 
                 foreach (var item in cuotas)
                 {

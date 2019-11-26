@@ -12,7 +12,7 @@ namespace ProyectoFinalAP1.BLL.Tests
     [TestClass()]
     public class PrestamosRepositorioTests
     {
-        [TestMethod()]//31
+        [TestMethod()]
         public void GuardarTest()
         {
             bool paso = false;
@@ -28,7 +28,7 @@ namespace ProyectoFinalAP1.BLL.Tests
             prestamo.PorcientoInteres = 8;
             prestamo.Interes = 80;
             prestamo.Balance = 1080;
-            prestamo.CantidadCuotas = 4;
+            prestamo.CantidadCuotas = 1;
             prestamo.Cuotas = new List<PrestamosDetalles>();
 
             paso = repositorio.Guardar(prestamo);
@@ -51,7 +51,7 @@ namespace ProyectoFinalAP1.BLL.Tests
             prestamo.PorcientoInteres = 8;
             prestamo.Interes = 80;
             prestamo.Balance = 1080;
-            prestamo.CantidadCuotas = 4;
+            prestamo.CantidadCuotas = 1;
             prestamo.Cuotas = new List<PrestamosDetalles>();
 
             paso = repositorio.Modificar(prestamo);

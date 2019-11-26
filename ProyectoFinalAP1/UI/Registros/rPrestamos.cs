@@ -83,7 +83,7 @@ namespace ProyectoFinalAP1.UI.Registros
             Prestamos prestamo = repositorio.Buscar((int)PrestamoIdnumericUpDown.Value);
             return (prestamo != null);
         }
-
+        
         private bool Validar()
         {
             bool paso = true;
@@ -229,7 +229,7 @@ namespace ProyectoFinalAP1.UI.Registros
                 this.Detalle.Add(
                     new PrestamosDetalles(
                         cuotaId: 0,
-                        prestamoId: 0,
+                        prestamoId: (int)PrestamoIdnumericUpDown.Value,
                         fecha: fecha, 
                         numerocuota: i,
                         capital: Math.Round((MontonumericUpDown.Value / CantidadCuotasnumericUpDown.Value), 2),

@@ -20,7 +20,7 @@ namespace ProyectoFinalAP1.BLL.Tests
             
             paso = repositorio.Desactivar(1);
 
-            Assert.Equals(paso, true);
+            Assert.AreEqual(paso, true);
         }
         [TestMethod()]
         public void GuardarTest()

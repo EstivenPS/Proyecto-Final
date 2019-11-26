@@ -19,8 +19,7 @@ namespace ProyectoFinalAP1.BLL.Tests
             CobradoresRepositorio repositorio = new CobradoresRepositorio();
 
             paso = repositorio.Desactivar(1);
-            
-            Assert.Equals(paso, true);
+            Assert.AreEqual(paso, true);
         }
 
         [TestMethod()]
@@ -52,7 +51,7 @@ namespace ProyectoFinalAP1.BLL.Tests
             Cobradores cobrador = new Cobradores();
             CobradoresRepositorio repositorio = new CobradoresRepositorio();
 
-            cobrador.CobradorId = 2;
+            cobrador.CobradorId = 1;
             cobrador.UsuarioId = 1;
             cobrador.Fecha = DateTime.Now;
             cobrador.Nombres = "Prueba";

@@ -14,29 +14,15 @@ namespace ProyectoFinalAP1.BLL
         {
             bool paso = false;
 
-            try
+            foreach (var item in prestamo.Cuotas)
             {
-                var Anterior = _contexto.Prestamos.Find(prestamo.PrestamoId);
-
-                foreach (var item in Anterior.Cuotas)
-                {
-                    _contexto.Entry(item).State = EntityState.Deleted;
-                }
-
-                foreach (var item in prestamo.Cuotas)
-                {
-                    _contexto.Entry(item).State = EntityState.Added;
-                }
-
-                _contexto.SaveChanges();
-            }
-            catch(Exception)
-            {
-                throw;
+                if (item.CuotaId == 0)
+                    base._contexto.Entry(item).State = EntityState.Added;
+                else
+                    base._contexto.Entry(item).State = EntityState.Modified;
             }
 
-            paso = base.Modificar(prestamo);
-            return paso;
+            return base.Modificar(prestamo);
         }
 
         public override Prestamos Buscar(int id)

@@ -13,11 +13,10 @@ namespace ProyectoFinalAP1.BLL
         public virtual bool Desactivar(int id)
         {
             bool paso = false;
+            Usuarios usuario = new Usuarios();
 
             try
             {
-                Usuarios usuario = new Usuarios();
-
                 usuario = _contexto.Usuario.Find(id);
                 usuario.Activo = false;
                 _contexto.Entry(usuario).State = EntityState.Modified;

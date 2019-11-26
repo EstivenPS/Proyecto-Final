@@ -145,7 +145,12 @@ namespace ProyectoFinalAP1.UI.Registros
             cobro = LlenaClase();
 
             if (CobroIdnumericUpDown.Value == 0)
+            {
                 paso = repositorio.Guardar(cobro);
+
+                if (!repositorio.CobrarCuota(cobro))
+                    MessageBox.Show("¡A ocurrido un error!");
+            }
             else
             {
                 if(!ExisteEnLaBaseDeDatos())
@@ -159,9 +164,6 @@ namespace ProyectoFinalAP1.UI.Registros
 
             if(paso)
             {
-                if (!repositorio.CobrarCuota(cobro))
-                    MessageBox.Show("¡A ocurrido un error!");
-
                 Limpiar();
                 MessageBox.Show("¡Guardado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -267,7 +269,7 @@ namespace ProyectoFinalAP1.UI.Registros
 
                 NumeroCuotacomboBox.DataSource = cuotas;
                 NumeroCuotacomboBox.DisplayMember = "NumeroCuota";
-                NumeroCuotacomboBox.ValueMember = "CuotaId";
+                NumeroCuotacomboBox.ValueMember = "NumeroCuota";
                 NumeroCuotacomboBox.Text = string.Empty;
                 NumeroCuotacomboBox.Enabled = true;
             }

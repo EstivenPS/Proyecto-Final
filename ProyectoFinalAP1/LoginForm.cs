@@ -79,7 +79,7 @@ namespace ProyectoFinalAP1
                 usuario.Cedula = "000-0000000-0";
                 usuario.Email = "admin@ucne.edu.do";
                 usuario.NombreUsuario = "admin";
-                usuario.ClaveUsuario = "admin";
+                usuario.ClaveUsuario = Encriptar("admin");
                 usuario.TipoUsuario = 0;
                 usuario.Activo = true;
 
@@ -122,7 +122,15 @@ namespace ProyectoFinalAP1
             ContraseñatextBox.UseSystemPasswordChar = true;
             MyerrorProvider.Clear();
         }
-        
+
+        private string Encriptar(string cadenaAencriptar)//Esta función encripta una cadena que se le pasa por parámentro
+        {
+            string result = string.Empty;
+            byte[] encryted = System.Text.Encoding.Unicode.GetBytes(cadenaAencriptar);
+            result = Convert.ToBase64String(encryted);
+            return result;
+        }
+
         private string DesEncriptar(string cadenaAdesencriptar)//Esta función desencripta la cadena que se le pasa por parámentro
         {
             string result = string.Empty;

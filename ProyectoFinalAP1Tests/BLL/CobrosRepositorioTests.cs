@@ -73,6 +73,7 @@ namespace ProyectoFinalAP1.BLL.Tests
         [TestMethod()]
         public void CobrarCuotaTest()
         {
+            bool paso = false;
             Cobros cobro = new Cobros();
             CobrosRepositorio repositorio = new CobrosRepositorio();
 
@@ -83,7 +84,9 @@ namespace ProyectoFinalAP1.BLL.Tests
             cobro.NumeroCuota = 1;
             cobro.Monto = 1;
 
-            Assert.IsTrue(repositorio.CobrarCuota(cobro));
+            paso = repositorio.CobrarCuota(cobro);
+
+            Assert.AreEqual(paso, true);
         }
     }
 }
