@@ -51,7 +51,7 @@ _Aquí se registran los cobros que se le realizaran a las cuotas de un prestamo 
 
 ![imagen](https://user-images.githubusercontent.com/54590857/69565032-7e793e80-0f8a-11ea-84a0-30a3dd0727ab.png)
 
-_Este es el registro de usuarios, cabe destacar que a la hora de crear un usuario se debe elegir el tipo de usurio, de entre las posible opciones estan:_ 
+_Este es el registro de usuarios, cabe destacar que a la hora de crear un usuario se debe elegir el tipo de usurio, de entre las posible opciones están:_ 
 
 * _**Administrador/a:** Este tiene acceso a todos los módulos del sistema y es el único capaz de crear nuevos usuarios y consultarlos._
 * _**Secretario/a:** Este sólo tiene acceso a los siguiente módulos: Clientes, Cobradores, Prestamos y Cobros._
@@ -64,7 +64,7 @@ _Aquí también se usa el campo "Estado" para definir si el usuario esta activo 
 
 ![imagen](https://user-images.githubusercontent.com/54590857/69566042-92be3b00-0f8c-11ea-9b56-b6c15a961610.png)
 
-_Todas las consultas funcionan de la misma manera, en estas se pueden realizar consultas especificas de los registros que se tengan registrados, también se permite filtrar por diversos campos así como también por un rango de fecha. Además de incluir un boton llamado "Imprimir" con el que podremos visualizar los registros consultados con anterioridad en un reporte como el siguiente:_
+_Todas las consultas funcionan de la misma manera, en estas se pueden realizar consultas específicas de los registros que se tengan guardados, también se permite filtrar por diversos campos así como también por un rango de fecha. Además de incluir un botón llamado "Imprimir" con el que podremos visualizar los registros consultados con anterioridad en un reporte como el siguiente:_
 
 ![imagen](https://user-images.githubusercontent.com/54590857/69566616-de251900-0f8d-11ea-8988-55a1dc42f5cd.png)
 
@@ -86,7 +86,7 @@ _Debe contar con una computadora que tenga como mínimo las siguientes especific
 
 ## ✒️ Autor 
 
-**Estiven de Jesus Padilla Santos (2017-0596).** 
+_**Estiven de Jesus Padilla Santos (2017-0596).**_
 
 ## 🎁 Expresiones de Gratitud 
 
