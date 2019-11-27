@@ -37,7 +37,7 @@ _Aquí se registran los cobradores que trabajan en la empresa y al igual que en 
 
 ![imagen](https://user-images.githubusercontent.com/54590857/69564321-3279ca00-0f89-11ea-9faa-1e54a86de3a2.png)
 
-_En este registro se guardan los prestamos. El cliente y el cobrador se debe elegir en base a los que se hayan registrado en el sistema, también se debe definir el tasa de interés a la que se realizará el prestamo y para finalizar se debe dar clic al botón con la palomilla verde para que se calculen y se muestren las cuotas que tendrá el prestamo en base a los datos llenados anteriormente._
+_En este registro se guardan los prestamos. El cliente y el cobrador se debe elegir en base a los que se hayan registrado en el sistema, también se debe definir la tasa de interés a la que se realizará el prestamo y para finalizar se debe dar clic al botón con la palomilla verde para que se calculen y se muestren las cuotas que tendrá el prestamo en base a los datos llenados anteriormente._
 
 ### 📋 Registro de cobros
 
