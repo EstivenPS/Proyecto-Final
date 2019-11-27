@@ -94,4 +94,4 @@ _**Estiven de Jesus Padilla Santos (2017-0596).**_
 * Gracias al profesor Enel por enseñarme todos los conocimientos requeridos para poder darle vida a este software 📚.
 * Gracias a mis amigos por ayudarme en mis momentos de dudas 🤓. 
 
-**Posdata:** Sé que no debo dar nada por asegurado pero, "Hoy se bebeeeeee" dijo Anthony Santos 🎉🍺.
+**Posdata:** Sé que no debo dar nada por asegurado, pero de todas formas "Hoy se bebeeeeee" dijo Anthony Santos 🎉🍺.
