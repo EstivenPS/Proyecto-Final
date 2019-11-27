@@ -73,7 +73,7 @@ _Todas las consultas funcionan de la misma manera, en estas se pueden realizar c
 _Debe contar con una computadora que tenga como mínimo las siguientes especificaciones:_
 
 * Sistema operativo: Windows 10 (64 bits).
-* Procesador: Intel(R) Core(TM) a 1.9 GHz.
+* Procesador: Intel(R) Core(TM) i3 a 1.9 GHz.
 * Memoria RAM: 8 Gb. 
 * Espacio en disco duro: 250 Gb.
 
