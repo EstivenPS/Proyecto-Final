@@ -90,7 +90,8 @@ _**Estiven de Jesus Padilla Santos (2017-0596).**_
 
 ## 🎁 Expresiones de Gratitud 
 
-* Gracias a Dios por permitirme llegar hasta este punto de mi carrera y por darme las fuerzas y la sabiduria para cumplir con cada una de las asignaciones que se me encomendaban durante el semestre ✨.
+* Gracias a Dios por permitirme llegar hasta este punto de mi carrera y por darme las fuerzas y la sabiduría para cumplir con cada una de las asignaciones que se me encomendaban durante el semestre ✨.
 * Gracias al profesor Enel por enseñarme todos los conocimientos requeridos para poder darle vida a este software 📚.
-* Gracias a mis amigos por ayudarme en mis momento de dudas 🤓. 
-* Posdata: Sé que no debo dar nada por asegurado pero, "Hoy se bebeeeeee" dijo Antony Santos 🎉🍺.
+* Gracias a mis amigos por ayudarme en mis momentos de dudas 🤓. 
+
+**Posdata:** Sé que no debo dar nada por asegurado pero, "Hoy se bebeeeeee" dijo Anthony Santos 🎉🍺.
