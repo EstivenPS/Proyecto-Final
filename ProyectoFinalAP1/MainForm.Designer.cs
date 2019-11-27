@@ -32,14 +32,15 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registroDePrestamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeCobradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDePrestamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeCobrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDeUsuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultaDePrestamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaDeCobradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registroDeUsuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaDePrestamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaDeCobrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaDeUsuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
@@ -61,8 +62,8 @@
             // 
             this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registroDeClientesToolStripMenuItem,
-            this.registroDePrestamosToolStripMenuItem,
             this.registroDeCobradoresToolStripMenuItem,
+            this.registroDePrestamosToolStripMenuItem,
             this.registroDeCobrosToolStripMenuItem,
             this.registroDeUsuariosToolStripMenuItem1});
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
@@ -71,38 +72,51 @@
             // 
             // registroDeClientesToolStripMenuItem
             // 
+            this.registroDeClientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registroDeClientesToolStripMenuItem.Image")));
             this.registroDeClientesToolStripMenuItem.Name = "registroDeClientesToolStripMenuItem";
             this.registroDeClientesToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.registroDeClientesToolStripMenuItem.Text = "Registro de Clientes";
             this.registroDeClientesToolStripMenuItem.Click += new System.EventHandler(this.registroDeClientesToolStripMenuItem_Click);
             // 
-            // registroDePrestamosToolStripMenuItem
-            // 
-            this.registroDePrestamosToolStripMenuItem.Name = "registroDePrestamosToolStripMenuItem";
-            this.registroDePrestamosToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.registroDePrestamosToolStripMenuItem.Text = "Registro de Prestamos";
-            this.registroDePrestamosToolStripMenuItem.Click += new System.EventHandler(this.registroDePrestamosToolStripMenuItem_Click);
-            // 
             // registroDeCobradoresToolStripMenuItem
             // 
+            this.registroDeCobradoresToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registroDeCobradoresToolStripMenuItem.Image")));
             this.registroDeCobradoresToolStripMenuItem.Name = "registroDeCobradoresToolStripMenuItem";
             this.registroDeCobradoresToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.registroDeCobradoresToolStripMenuItem.Text = "Registro de Cobradores";
             this.registroDeCobradoresToolStripMenuItem.Click += new System.EventHandler(this.registroDeCobradoresToolStripMenuItem_Click);
             // 
+            // registroDePrestamosToolStripMenuItem
+            // 
+            this.registroDePrestamosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registroDePrestamosToolStripMenuItem.Image")));
+            this.registroDePrestamosToolStripMenuItem.Name = "registroDePrestamosToolStripMenuItem";
+            this.registroDePrestamosToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.registroDePrestamosToolStripMenuItem.Text = "Registro de Prestamos";
+            this.registroDePrestamosToolStripMenuItem.Click += new System.EventHandler(this.registroDePrestamosToolStripMenuItem_Click);
+            // 
             // registroDeCobrosToolStripMenuItem
             // 
+            this.registroDeCobrosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registroDeCobrosToolStripMenuItem.Image")));
             this.registroDeCobrosToolStripMenuItem.Name = "registroDeCobrosToolStripMenuItem";
             this.registroDeCobrosToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.registroDeCobrosToolStripMenuItem.Text = "Registro de Cobros";
             this.registroDeCobrosToolStripMenuItem.Click += new System.EventHandler(this.registroDeCobrosToolStripMenuItem_Click);
             // 
+            // registroDeUsuariosToolStripMenuItem1
+            // 
+            this.registroDeUsuariosToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("registroDeUsuariosToolStripMenuItem1.Image")));
+            this.registroDeUsuariosToolStripMenuItem1.Name = "registroDeUsuariosToolStripMenuItem1";
+            this.registroDeUsuariosToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
+            this.registroDeUsuariosToolStripMenuItem1.Text = "Registro de Usuarios";
+            this.registroDeUsuariosToolStripMenuItem1.Click += new System.EventHandler(this.registroDeUsuariosToolStripMenuItem1_Click);
+            // 
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultaDeClientesToolStripMenuItem,
-            this.consultaDePrestamosToolStripMenuItem,
             this.consultaDeCobradoresToolStripMenuItem,
+            this.consultaDePrestamosToolStripMenuItem,
+            this.consultaDeCobrosToolStripMenuItem,
             this.consultaDeUsuariosToolStripMenuItem1});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
@@ -110,34 +124,39 @@
             // 
             // consultaDeClientesToolStripMenuItem
             // 
+            this.consultaDeClientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultaDeClientesToolStripMenuItem.Image")));
             this.consultaDeClientesToolStripMenuItem.Name = "consultaDeClientesToolStripMenuItem";
             this.consultaDeClientesToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.consultaDeClientesToolStripMenuItem.Text = "Consulta de Clientes";
             this.consultaDeClientesToolStripMenuItem.Click += new System.EventHandler(this.consultaDeClientesToolStripMenuItem_Click);
             // 
-            // consultaDePrestamosToolStripMenuItem
-            // 
-            this.consultaDePrestamosToolStripMenuItem.Name = "consultaDePrestamosToolStripMenuItem";
-            this.consultaDePrestamosToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.consultaDePrestamosToolStripMenuItem.Text = "Consulta de Prestamos";
-            this.consultaDePrestamosToolStripMenuItem.Click += new System.EventHandler(this.consultaDePrestamosToolStripMenuItem_Click);
-            // 
             // consultaDeCobradoresToolStripMenuItem
             // 
+            this.consultaDeCobradoresToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultaDeCobradoresToolStripMenuItem.Image")));
             this.consultaDeCobradoresToolStripMenuItem.Name = "consultaDeCobradoresToolStripMenuItem";
             this.consultaDeCobradoresToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.consultaDeCobradoresToolStripMenuItem.Text = "Consulta de Cobradores";
             this.consultaDeCobradoresToolStripMenuItem.Click += new System.EventHandler(this.consultaDeCobradoresToolStripMenuItem_Click);
             // 
-            // registroDeUsuariosToolStripMenuItem1
+            // consultaDePrestamosToolStripMenuItem
             // 
-            this.registroDeUsuariosToolStripMenuItem1.Name = "registroDeUsuariosToolStripMenuItem1";
-            this.registroDeUsuariosToolStripMenuItem1.Size = new System.Drawing.Size(197, 22);
-            this.registroDeUsuariosToolStripMenuItem1.Text = "Registro de Usuarios";
-            this.registroDeUsuariosToolStripMenuItem1.Click += new System.EventHandler(this.registroDeUsuariosToolStripMenuItem1_Click);
+            this.consultaDePrestamosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultaDePrestamosToolStripMenuItem.Image")));
+            this.consultaDePrestamosToolStripMenuItem.Name = "consultaDePrestamosToolStripMenuItem";
+            this.consultaDePrestamosToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.consultaDePrestamosToolStripMenuItem.Text = "Consulta de Prestamos";
+            this.consultaDePrestamosToolStripMenuItem.Click += new System.EventHandler(this.consultaDePrestamosToolStripMenuItem_Click);
+            // 
+            // consultaDeCobrosToolStripMenuItem
+            // 
+            this.consultaDeCobrosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultaDeCobrosToolStripMenuItem.Image")));
+            this.consultaDeCobrosToolStripMenuItem.Name = "consultaDeCobrosToolStripMenuItem";
+            this.consultaDeCobrosToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.consultaDeCobrosToolStripMenuItem.Text = "Consulta de Cobros";
+            this.consultaDeCobrosToolStripMenuItem.Click += new System.EventHandler(this.consultaDeCobrosToolStripMenuItem_Click);
             // 
             // consultaDeUsuariosToolStripMenuItem1
             // 
+            this.consultaDeUsuariosToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("consultaDeUsuariosToolStripMenuItem1.Image")));
             this.consultaDeUsuariosToolStripMenuItem1.Name = "consultaDeUsuariosToolStripMenuItem1";
             this.consultaDeUsuariosToolStripMenuItem1.Size = new System.Drawing.Size(201, 22);
             this.consultaDeUsuariosToolStripMenuItem1.Text = "Consulta de Usuarios";
@@ -146,8 +165,8 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.salirToolStripMenuItem.Text = "Cerrar sesión";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // MainForm
@@ -163,7 +182,7 @@
             this.MinimizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu";
+            this.Text = "Menú";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -187,6 +206,7 @@
         private System.Windows.Forms.ToolStripMenuItem registroDeUsuariosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem consultaDeUsuariosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaDeCobrosToolStripMenuItem;
     }
 }
 

@@ -69,7 +69,7 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "¿Desea ELIMINAR o DESACTIVAR este usuario?";
             // 
-            // EliminarUsuariosForm
+            // EliminarUsuariosVDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -77,7 +77,8 @@
             this.Controls.Add(this.DesactivarVDbutton);
             this.Controls.Add(this.EliminarVDbutton);
             this.Controls.Add(this.label1);
-            this.Name = "EliminarUsuariosForm";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "EliminarUsuariosVDForm";
             this.Text = "Eliminar";
             this.ResumeLayout(false);
             this.PerformLayout();

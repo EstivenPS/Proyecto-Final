@@ -81,6 +81,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(351, 40);
             this.label4.Name = "label4";
@@ -90,6 +91,7 @@
             // 
             // CuotasgroupBox
             // 
+            this.CuotasgroupBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.CuotasgroupBox.Controls.Add(this.DetalledataGridView);
             this.CuotasgroupBox.Location = new System.Drawing.Point(12, 247);
             this.CuotasgroupBox.Name = "CuotasgroupBox";
@@ -151,6 +153,7 @@
             // 
             // FechadateTimePicker
             // 
+            this.FechadateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.Location = new System.Drawing.Point(397, 38);
@@ -160,6 +163,7 @@
             // 
             // Eliminarbutton
             // 
+            this.Eliminarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Eliminarbutton.Location = new System.Drawing.Point(406, 463);
@@ -173,6 +177,7 @@
             // 
             // Guardarbutton
             // 
+            this.Guardarbutton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Guardarbutton.Location = new System.Drawing.Point(215, 463);
@@ -186,6 +191,7 @@
             // 
             // Nuevobutton
             // 
+            this.Nuevobutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Nuevobutton.Location = new System.Drawing.Point(12, 463);
@@ -251,6 +257,7 @@
             // 
             // CalcularCuotasbutton
             // 
+            this.CalcularCuotasbutton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.CalcularCuotasbutton.Image = ((System.Drawing.Image)(resources.GetObject("CalcularCuotasbutton.Image")));
             this.CalcularCuotasbutton.Location = new System.Drawing.Point(190, 218);
             this.CalcularCuotasbutton.Name = "CalcularCuotasbutton";
@@ -261,6 +268,7 @@
             // 
             // CantidadCuotasnumericUpDown
             // 
+            this.CantidadCuotasnumericUpDown.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.CantidadCuotasnumericUpDown.Location = new System.Drawing.Point(127, 220);
             this.CantidadCuotasnumericUpDown.Name = "CantidadCuotasnumericUpDown";
             this.CantidadCuotasnumericUpDown.Size = new System.Drawing.Size(57, 20);
@@ -268,6 +276,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(18, 222);
             this.label9.Name = "label9";
@@ -277,6 +286,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(19, 197);
             this.label8.Name = "label8";
@@ -286,6 +296,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(19, 171);
             this.label7.Name = "label7";
@@ -320,6 +331,7 @@
             // 
             // Intereslabel
             // 
+            this.Intereslabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Intereslabel.AutoSize = true;
             this.Intereslabel.Location = new System.Drawing.Point(124, 171);
             this.Intereslabel.Name = "Intereslabel";
@@ -329,6 +341,7 @@
             // 
             // Balancelabel
             // 
+            this.Balancelabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Balancelabel.AutoSize = true;
             this.Balancelabel.Location = new System.Drawing.Point(124, 197);
             this.Balancelabel.Name = "Balancelabel";
@@ -338,6 +351,7 @@
             // 
             // Usuariolabel
             // 
+            this.Usuariolabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Usuariolabel.AutoSize = true;
             this.Usuariolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Usuariolabel.Location = new System.Drawing.Point(253, 9);
@@ -348,6 +362,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(198, 9);
@@ -358,6 +373,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(172, 4);
             this.pictureBox1.Name = "pictureBox1";
@@ -382,6 +398,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(18, 146);
             this.label6.Name = "label6";
@@ -391,6 +408,7 @@
             // 
             // PorcientoInteresnumericUpDown
             // 
+            this.PorcientoInteresnumericUpDown.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.PorcientoInteresnumericUpDown.DecimalPlaces = 2;
             this.PorcientoInteresnumericUpDown.Location = new System.Drawing.Point(127, 144);
             this.PorcientoInteresnumericUpDown.Name = "PorcientoInteresnumericUpDown";
@@ -400,6 +418,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(184, 144);

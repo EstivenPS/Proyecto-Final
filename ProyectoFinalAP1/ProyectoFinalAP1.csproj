@@ -63,20 +63,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\ClientesRepositorio.cs" />
-    <Compile Include="BLL\CobradoresRepositorio.cs" />
-    <Compile Include="BLL\CobrosRepositorio.cs" />
-    <Compile Include="BLL\IRepository.cs" />
-    <Compile Include="BLL\PrestamosRepositorio.cs" />
-    <Compile Include="BLL\RepositorioBase.cs" />
-    <Compile Include="BLL\UsuariosRepositorio.cs" />
-    <Compile Include="DAL\Contexto.cs" />
-    <Compile Include="Entidades\Clientes.cs" />
-    <Compile Include="Entidades\Cobradores.cs" />
-    <Compile Include="Entidades\Cobros.cs" />
-    <Compile Include="Entidades\PrestamosDetalles.cs" />
-    <Compile Include="Entidades\Prestamos.cs" />
-    <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,13 +338,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <Folder Include="UI\Resources\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DAL\Scripts\Scripts.sql" />
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{73792c12-9c4c-4920-842d-4bc84dcb20c8}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{383b9914-4dc2-4937-bb5f-4cf5c34c8115}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

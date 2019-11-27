@@ -1,4 +1,4 @@
-﻿using ProyectoFinalAP1.Entidades;
+﻿using Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

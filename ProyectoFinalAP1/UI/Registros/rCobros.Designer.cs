@@ -72,6 +72,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(322, 43);
             this.label2.Name = "label2";
@@ -81,6 +82,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(17, 95);
             this.label3.Name = "label3";
@@ -90,6 +92,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(270, 96);
             this.label4.Name = "label4";
@@ -99,6 +102,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(17, 171);
             this.label5.Name = "label5";
@@ -120,6 +124,7 @@
             // 
             // FechadateTimePicker
             // 
+            this.FechadateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.Location = new System.Drawing.Point(368, 40);
@@ -129,6 +134,7 @@
             // 
             // Eliminarbutton
             // 
+            this.Eliminarbutton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Eliminarbutton.Location = new System.Drawing.Point(253, 200);
@@ -142,6 +148,7 @@
             // 
             // Guardarbutton
             // 
+            this.Guardarbutton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Guardarbutton.Location = new System.Drawing.Point(137, 200);
@@ -155,6 +162,7 @@
             // 
             // Nuevobutton
             // 
+            this.Nuevobutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Nuevobutton.Location = new System.Drawing.Point(19, 199);
@@ -185,6 +193,7 @@
             // 
             // Usuariolabel
             // 
+            this.Usuariolabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Usuariolabel.AutoSize = true;
             this.Usuariolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Usuariolabel.Location = new System.Drawing.Point(261, 10);
@@ -195,6 +204,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(206, 10);
@@ -205,6 +215,7 @@
             // 
             // UsuariopictureBox
             // 
+            this.UsuariopictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.UsuariopictureBox.Image = ((System.Drawing.Image)(resources.GetObject("UsuariopictureBox.Image")));
             this.UsuariopictureBox.Location = new System.Drawing.Point(180, 5);
             this.UsuariopictureBox.Name = "UsuariopictureBox";
@@ -215,6 +226,7 @@
             // 
             // MontonumericUpDown
             // 
+            this.MontonumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.MontonumericUpDown.DecimalPlaces = 2;
             this.MontonumericUpDown.Location = new System.Drawing.Point(157, 169);
             this.MontonumericUpDown.Maximum = new decimal(new int[] {
@@ -247,6 +259,7 @@
             // 
             // PrestamoIdcomboBox
             // 
+            this.PrestamoIdcomboBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.PrestamoIdcomboBox.FormattingEnabled = true;
             this.PrestamoIdcomboBox.Location = new System.Drawing.Point(156, 93);
             this.PrestamoIdcomboBox.Name = "PrestamoIdcomboBox";
@@ -256,6 +269,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(17, 146);
             this.label7.Name = "label7";
@@ -265,6 +279,7 @@
             // 
             // BalancePrestamolabel
             // 
+            this.BalancePrestamolabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BalancePrestamolabel.AutoSize = true;
             this.BalancePrestamolabel.Location = new System.Drawing.Point(153, 146);
             this.BalancePrestamolabel.Name = "BalancePrestamolabel";
@@ -274,6 +289,7 @@
             // 
             // NumeroCuotacomboBox
             // 
+            this.NumeroCuotacomboBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.NumeroCuotacomboBox.FormattingEnabled = true;
             this.NumeroCuotacomboBox.Location = new System.Drawing.Point(368, 93);
             this.NumeroCuotacomboBox.Name = "NumeroCuotacomboBox";
@@ -283,6 +299,7 @@
             // 
             // BalanceCuotalabel
             // 
+            this.BalanceCuotalabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BalanceCuotalabel.AutoSize = true;
             this.BalanceCuotalabel.Location = new System.Drawing.Point(153, 123);
             this.BalanceCuotalabel.Name = "BalanceCuotalabel";
@@ -292,6 +309,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(17, 123);
             this.label9.Name = "label9";
@@ -301,6 +319,7 @@
             // 
             // Imprimirbutton
             // 
+            this.Imprimirbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Imprimirbutton.Image = ((System.Drawing.Image)(resources.GetObject("Imprimirbutton.Image")));
             this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Imprimirbutton.Location = new System.Drawing.Point(376, 200);

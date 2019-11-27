@@ -63,6 +63,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(269, 14);
             this.label3.Name = "label3";
@@ -72,6 +73,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(437, 14);
             this.label4.Name = "label4";
@@ -99,6 +101,7 @@
             // 
             // FiltrocomboBox
             // 
+            this.FiltrocomboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.FiltrocomboBox.FormattingEnabled = true;
             this.FiltrocomboBox.Items.AddRange(new object[] {
             "Todos",
@@ -115,6 +118,7 @@
             // 
             // CriteriotextBox
             // 
+            this.CriteriotextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.CriteriotextBox.Location = new System.Drawing.Point(485, 11);
             this.CriteriotextBox.Name = "CriteriotextBox";
             this.CriteriotextBox.Size = new System.Drawing.Size(204, 20);
@@ -122,6 +126,9 @@
             // 
             // ConsultadataGridView
             // 
+            this.ConsultadataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ConsultadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ConsultadataGridView.Location = new System.Drawing.Point(12, 41);
             this.ConsultadataGridView.Name = "ConsultadataGridView";
@@ -131,6 +138,7 @@
             // 
             // Consultarbutton
             // 
+            this.Consultarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Consultarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Consultarbutton.Image")));
             this.Consultarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Consultarbutton.Location = new System.Drawing.Point(695, 8);
@@ -144,6 +152,7 @@
             // 
             // Imprimirbutton
             // 
+            this.Imprimirbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Imprimirbutton.Image = ((System.Drawing.Image)(resources.GetObject("Imprimirbutton.Image")));
             this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Imprimirbutton.Location = new System.Drawing.Point(774, 8);

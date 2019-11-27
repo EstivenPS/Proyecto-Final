@@ -35,9 +35,11 @@
             // MycrystalReportViewer
             // 
             this.MycrystalReportViewer.ActiveViewIndex = -1;
+            this.MycrystalReportViewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MycrystalReportViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MycrystalReportViewer.Cursor = System.Windows.Forms.Cursors.Default;
-            this.MycrystalReportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MycrystalReportViewer.Location = new System.Drawing.Point(0, 0);
             this.MycrystalReportViewer.Name = "MycrystalReportViewer";
             this.MycrystalReportViewer.Size = new System.Drawing.Size(800, 450);

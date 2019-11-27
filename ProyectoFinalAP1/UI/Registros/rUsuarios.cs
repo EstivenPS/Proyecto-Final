@@ -1,5 +1,5 @@
-﻿using ProyectoFinalAP1.BLL;
-using ProyectoFinalAP1.Entidades;
+﻿using BLL;
+using Entidades;
 using ProyectoFinalAP1.UI.Ventanas_de_Dialogo;
 using System;
 using System.Collections.Generic;

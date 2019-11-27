@@ -1,4 +1,4 @@
-﻿using ProyectoFinalAP1.Entidades;
+﻿using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,14 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoFinalAP1.BLL
+namespace BLL
 {
     public class PrestamosRepositorio : RepositorioBase<Prestamos>
     {
         public override bool Modificar(Prestamos prestamo)
         {
-            bool paso = false;
-
             foreach (var item in prestamo.Cuotas)
             {
                 if (item.CuotaId == 0)

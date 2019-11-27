@@ -1,4 +1,4 @@
-﻿using ProyectoFinalAP1.BLL;
+﻿using BLL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

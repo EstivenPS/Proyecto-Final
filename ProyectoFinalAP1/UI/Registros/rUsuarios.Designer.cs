@@ -65,6 +65,7 @@
             // 
             // DatosPersonalesgroupBox
             // 
+            this.DatosPersonalesgroupBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.DatosPersonalesgroupBox.Controls.Add(this.EmailtextBox);
             this.DatosPersonalesgroupBox.Controls.Add(this.label10);
             this.DatosPersonalesgroupBox.Controls.Add(this.CedulamaskedTextBox);
@@ -168,6 +169,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(335, 14);
             this.label2.Name = "label2";
@@ -177,6 +179,7 @@
             // 
             // FechadateTimePicker
             // 
+            this.FechadateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.Location = new System.Drawing.Point(381, 12);
@@ -186,6 +189,7 @@
             // 
             // DatosUsuariogroupBox
             // 
+            this.DatosUsuariogroupBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.DatosUsuariogroupBox.Controls.Add(this.ActivocheckBox);
             this.DatosUsuariogroupBox.Controls.Add(this.label9);
             this.DatosUsuariogroupBox.Controls.Add(this.TipoUsuariocomboBox);
@@ -278,6 +282,7 @@
             // 
             // Nuevobutton
             // 
+            this.Nuevobutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Nuevobutton.Location = new System.Drawing.Point(21, 319);
@@ -291,6 +296,7 @@
             // 
             // Guardarbutton
             // 
+            this.Guardarbutton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Guardarbutton.Location = new System.Drawing.Point(200, 319);
@@ -304,6 +310,7 @@
             // 
             // Eliminarbutton
             // 
+            this.Eliminarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Eliminarbutton.Location = new System.Drawing.Point(375, 319);

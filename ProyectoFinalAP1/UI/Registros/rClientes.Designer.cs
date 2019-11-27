@@ -78,6 +78,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(273, 44);
             this.label2.Name = "label2";
@@ -105,6 +106,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(11, 149);
             this.label5.Name = "label5";
@@ -114,6 +116,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(10, 201);
             this.label6.Name = "label6";
@@ -123,6 +126,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(10, 123);
             this.label7.Name = "label7";
@@ -132,6 +136,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(11, 257);
             this.label9.Name = "label9";
@@ -167,6 +172,7 @@
             // 
             // DirecciontextBox
             // 
+            this.DirecciontextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.DirecciontextBox.Location = new System.Drawing.Point(78, 120);
             this.DirecciontextBox.Name = "DirecciontextBox";
             this.DirecciontextBox.Size = new System.Drawing.Size(322, 20);
@@ -174,6 +180,7 @@
             // 
             // CedulamaskedTextBox
             // 
+            this.CedulamaskedTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.CedulamaskedTextBox.Location = new System.Drawing.Point(78, 146);
             this.CedulamaskedTextBox.Mask = "000-0000000-0";
             this.CedulamaskedTextBox.Name = "CedulamaskedTextBox";
@@ -182,6 +189,7 @@
             // 
             // TelefonomaskedTextBox
             // 
+            this.TelefonomaskedTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.TelefonomaskedTextBox.Location = new System.Drawing.Point(77, 198);
             this.TelefonomaskedTextBox.Mask = "000-000-0000";
             this.TelefonomaskedTextBox.Name = "TelefonomaskedTextBox";
@@ -190,6 +198,7 @@
             // 
             // FechadateTimePicker
             // 
+            this.FechadateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.Location = new System.Drawing.Point(319, 42);
@@ -199,6 +208,7 @@
             // 
             // ActivocheckBox
             // 
+            this.ActivocheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ActivocheckBox.AutoSize = true;
             this.ActivocheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ActivocheckBox.ForeColor = System.Drawing.Color.Green;
@@ -212,6 +222,7 @@
             // 
             // Eliminarbutton
             // 
+            this.Eliminarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Eliminarbutton.Location = new System.Drawing.Point(321, 281);
@@ -225,6 +236,7 @@
             // 
             // Guardarbutton
             // 
+            this.Guardarbutton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Guardarbutton.Location = new System.Drawing.Point(169, 281);
@@ -238,6 +250,7 @@
             // 
             // Nuevobutton
             // 
+            this.Nuevobutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Nuevobutton.Location = new System.Drawing.Point(15, 281);
@@ -264,6 +277,7 @@
             // 
             // CelularmaskedTextBox
             // 
+            this.CelularmaskedTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.CelularmaskedTextBox.Location = new System.Drawing.Point(77, 224);
             this.CelularmaskedTextBox.Mask = "000-000-0000";
             this.CelularmaskedTextBox.Name = "CelularmaskedTextBox";
@@ -272,6 +286,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(10, 227);
             this.label10.Name = "label10";
@@ -281,6 +296,7 @@
             // 
             // EmailtextBox
             // 
+            this.EmailtextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.EmailtextBox.Location = new System.Drawing.Point(77, 172);
             this.EmailtextBox.Name = "EmailtextBox";
             this.EmailtextBox.Size = new System.Drawing.Size(322, 20);
@@ -288,6 +304,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(10, 175);
             this.label11.Name = "label11";
@@ -297,6 +314,7 @@
             // 
             // UsuariopictureBox
             // 
+            this.UsuariopictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.UsuariopictureBox.Image = ((System.Drawing.Image)(resources.GetObject("UsuariopictureBox.Image")));
             this.UsuariopictureBox.Location = new System.Drawing.Point(131, 4);
             this.UsuariopictureBox.Name = "UsuariopictureBox";
@@ -307,6 +325,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(157, 9);
@@ -317,6 +336,7 @@
             // 
             // Usuariolabel
             // 
+            this.Usuariolabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Usuariolabel.AutoSize = true;
             this.Usuariolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Usuariolabel.Location = new System.Drawing.Point(212, 9);

@@ -1,4 +1,4 @@
-﻿using ProyectoFinalAP1.Entidades;
+﻿using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -6,20 +6,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoFinalAP1.BLL
+namespace BLL
 {
-    public class CobradoresRepositorio : RepositorioBase<Cobradores>
+    public class UsuariosRepositorio : RepositorioBase<Usuarios>
     {
         public virtual bool Desactivar(int id)
         {
             bool paso = false;
-            Cobradores cobrador = new Cobradores();
+            Usuarios usuario = new Usuarios();
 
             try
             {
-                cobrador = _contexto.Cobrador.Find(id);
-                cobrador.Activo = false;
-                _contexto.Entry(cobrador).State = EntityState.Modified;
+                usuario = _contexto.Usuario.Find(id);
+                usuario.Activo = false;
+                _contexto.Entry(usuario).State = EntityState.Modified;
                 paso = _contexto.SaveChanges() > 0;
             }
             catch (Exception)
