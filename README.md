@@ -51,7 +51,7 @@ _Aquí se registran los cobros que se le realizaran a las cuotas de un prestamo 
 
 ![imagen](https://user-images.githubusercontent.com/54590857/69565032-7e793e80-0f8a-11ea-84a0-30a3dd0727ab.png)
 
-_Este es el registro de usuarios, a la hora de crear un usuario se debe elegir el tipo de usurio, de entre las posible opciones están:_ 
+_Este es el registro de usuarios, a la hora de crear un usuario se debe elegir el tipo de usurio, de entre las posibles opciones están:_ 
 
 * _**Administrador/a:** Este tiene acceso a todos los módulos del sistema y es el único capaz de crear nuevos usuarios y consultarlos._
 * _**Secretario/a:** Este sólo tiene acceso a los siguiente módulos: Clientes, Cobradores, Prestamos y Cobros._
