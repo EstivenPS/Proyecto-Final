@@ -43,7 +43,9 @@ _En este registro se guardan los prestamos. El cliente y el cobrador se debe ele
 
 ![imagen](https://user-images.githubusercontent.com/54590857/69573437-76c29580-0f9c-11ea-8480-b4e08c48d725.png)
 
-_Aquí se registran los cobros que se le realizaran a las cuotas de un prestamo en particular. Para ello se debe llenar en el siguiente orden: primero se debe elegir el cliente al que se le va a realizar el cobro, después se habilitará el campo "Prestamo Id" para elegir de entre los prestamos pertenecientes al cliente, aquel al que se le va a realizar el cobro, luego de esto se habilitará el campo "Número de cuota" para que elija el número de la cuota y automáticamente se va a habilitar el campo de "Monto", el cual sólo admite montos menores o iguales al balance de la cuota elegida previamente. También se tiene un botón con el cual se puede imprimir un recibo con algunos datos del cobro._
+_Aquí se registran los cobros que se le realizaran a las cuotas de un prestamo en particular. Para ello se debe llenar en el siguiente orden: primero se debe elegir el cliente al que se le va a realizar el cobro, después se habilitará el campo "Prestamo Id" para elegir de entre los prestamos pertenecientes al cliente, aquel al que se le va a realizar el cobro, luego de esto se habilitará el campo "Número de cuota" para que elija el número de la cuota y automáticamente se va a habilitar el campo de "Monto", el cual sólo admite montos menores o iguales al balance de la cuota elegida previamente. También se tiene un botón con el cual se puede imprimir un recibo con algunos datos del cobro, como el que se muestra a continuación:._
+
+![imagen](https://user-images.githubusercontent.com/54590857/69686732-00568e00-1097-11ea-9086-9356a27a7209.png)
 
 ### 📋 Registro de usuarios 
 
