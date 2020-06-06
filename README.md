@@ -3,7 +3,7 @@
 
 ![Logo](https://user-images.githubusercontent.com/54590857/69562467-9a2e1600-0f85-11ea-90d3-7fb05af524a4.jpg)
 
-_EPS Prestamos es un sistema de prestamos de dinero en efectivo, el cual tiene como proposito optimizar, eficientizar y sistematizar algunos trabajos referentes a prestamos._
+_EPS Prestamos es un sistema de prestamos de dinero en efectivo, el cual tiene como proposito optimizar, eficientizar y sistematizar algunos trabajos referentes a prestamos de dinero._
 
 ## ⌨️ Login 
 
